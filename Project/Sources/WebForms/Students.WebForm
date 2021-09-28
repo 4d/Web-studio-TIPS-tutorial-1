@@ -114,6 +114,13 @@
 				"parentId": null,
 				"scope": "local",
 				"id": "iapEG1UAIQA_OUnZ6O6vb"
+			},
+			{
+				"name": "matrixStyle",
+				"content": "self {\n border-width : 1px;\n  border-color : #e7e7e7;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "CR5FLkYmrXIBl9sZM014H"
 			}
 		]
 	},
@@ -174,7 +181,9 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"classNames": [],
+				"classNames": [
+					"matrixStyle"
+				],
 				"style": {
 					"height": "600px",
 					"marginTop": "10px"
