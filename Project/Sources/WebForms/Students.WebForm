@@ -39,7 +39,7 @@
 				"events": []
 			},
 			{
-				"id": "attender",
+				"id": "attendee",
 				"from": "",
 				"dataclass": "Students",
 				"dataType": "",
@@ -1529,7 +1529,7 @@
 					"marginTop": "10px"
 				},
 				"datasource": "currentCourse.students",
-				"currentElement": "attender",
+				"currentElement": "attendee",
 				"columns": [
 					{
 						"title": "Firstname",
