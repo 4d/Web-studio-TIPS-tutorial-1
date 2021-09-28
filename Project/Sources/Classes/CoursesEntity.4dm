@@ -1,9 +1,12 @@
 Class extends Entity
 
 
-exposed Function students
+exposed Function get students
 	
-	var $0 : cs:C1710.StudentsSelection
+	var $0 : cs.StudentsSelection
 	
-	$0:=This:C1470.attendedBy.student
-	
+	$0:=This.attendedBy.student
+
+
+exposed Function get numberOfAttendees->$result : Integer
+	$result:=This.attendedBy.length

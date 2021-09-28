@@ -31,7 +31,11 @@ Function computeStudentID() : Integer
 	End use 
 	
 	
+exposed Function search($search : Text)->$result : cs:C1710.StudentsSelection
 	
+	$search:="@"+$search+"@"
+	
+	$result:=This:C1470.query("firstname = :1 or lastname = :1"; $search)
 	
 	
 	
