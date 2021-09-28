@@ -1,0 +1,89 @@
+{
+	"metadata": {
+		"v": "2.0"
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white h-full w-full p-4",
+				"style": {},
+				"events": [],
+				"isInsideCanvas": false
+			},
+			"displayName": "WebForm",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"ODMm2vlEa",
+				"Eyptjl1BQ"
+			],
+			"linkedNodes": {}
+		},
+		"ODMm2vlEa": {
+			"type": {
+				"resolvedName": "Radio"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"defaultValue": "option2",
+				"mode": "single",
+				"options": [
+					{
+						"id": "av3gi1gM4FESihKBR1PuDo",
+						"label": "Option 1",
+						"value": "option1"
+					},
+					{
+						"id": "gUeAS3BkzLX7HyjQe1uTSE",
+						"label": "Option 2",
+						"value": "option2"
+					}
+				],
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Radio",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"Eyptjl1BQ": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {},
+			"displayName": "StyleBox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"716VrOjuq"
+			],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"716VrOjuq": {
+			"type": {
+				"resolvedName": "WebformLoader"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform Loader",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "Eyptjl1BQ"
+		}
+	}
+}

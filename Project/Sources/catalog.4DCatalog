@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Tutorial_1" uuid="2D4F6103DC084198BFC0283C03D0A0B2" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="(INFO)" uuid="107A367EBCC346259FD971E8FC1097DA" id="1" hide_in_REST="true">
+		<field name="ID" uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="Description" uuid="C9EFE648E9234AADA33FB25D61C0190B" type="10" never_null="true" id="2">
+			<field_extra position="4"/>
+		</field>
+		<field name="TabTitle" uuid="58AF214936C941439CB263026A5B46ED" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra position="3"/>
+		</field>
+		<field name="PageNumber" uuid="A2D86BBFD5134D06999CBDD14FD07A27" type="4" never_null="true" id="4">
+			<field_extra position="2"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B"/>
+		<table_extra input_form="Input" output_form="Output" trashed="true">
+			<editor_table_info fields_ordering="2" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="894.8046875" top="38.421875" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Students" uuid="5282F539D733401484D055432019BEFE" id="2">
+		<field name="ID" uuid="3143163C978447F5B300CF6B4B94BF04" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="firstname" uuid="088318FEBEB04AE586D2B90FD72E6163" type="10" limiting_length="255" never_null="true" id="2">
+			<field_extra position="2"/>
+		</field>
+		<field name="lastname" uuid="53683A56581D4116BB0D06F39656FF01" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra position="3"/>
+		</field>
+		<field name="birthDate" uuid="363B4C3038614673A9BF90C040D8C7AC" type="8" never_null="true" id="4">
+			<field_extra position="4"/>
+		</field>
+		<field name="gender" uuid="CC9F2BE2635542D9BC5F3FB900B1F67B" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="studentID" uuid="BD31F9582C7144B8A87BF3D734C1C568" type="3" never_null="true" id="6">
+			<field_extra position="5"/>
+		</field>
+		<field name="hobbies" uuid="1643001DB69E4444BDA156F29F2A132C" type="21" blob_switch_size="2147483647" never_null="true" id="7"/>
+		<field name="state" uuid="1F17092C15024F79B5D4DA478CF71887" type="10" limiting_length="255" never_null="true" id="8"/>
+		<field name="photo" uuid="1DAAB570C0D249E7BFB4FDB81212C2D7" type="12" never_null="true" id="9"/>
+		<field name="hasDrivingLicence" uuid="A2077F2D63BE452AA48CC00FD464DA45" type="1" id="10"/>
+		<field name="country" uuid="6715D0322A274AD1AC6ABFF8F0112C01" type="10" limiting_length="255" never_null="true" id="11"/>
+		<field name="zipCode" uuid="B532F77BEA81481797FE62EDA054A92A" type="10" limiting_length="255" never_null="true" id="12"/>
+		<field name="phone" uuid="2DEE634C47A84AA48437CB155B46B19E" type="10" limiting_length="255" never_null="true" id="13"/>
+		<field name="email" uuid="71B25050AD1047A4914EC126041293E7" type="10" limiting_length="255" never_null="true" id="14"/>
+		<field name="address" uuid="012A3B3A7D0449C38FB99A47B205D751" type="10" limiting_length="255" never_null="true" id="15"/>
+		<field name="suffix" uuid="3F3224E444E54396BBCB8CF95375D8CC" type="10" limiting_length="255" never_null="true" id="16"/>
+		<field name="city" uuid="22E3E7F3F9324D7FA67BF022694980E7" type="10" limiting_length="255" never_null="true" id="17"/>
+		<primary_key field_name="ID" field_uuid="3143163C978447F5B300CF6B4B94BF04"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="18">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="233.9140625" top="210.77734375" width="263.73828125" height="420.32421875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Schools" uuid="2713146E10A344DEB883CC3E0EF45592" id="3">
+		<field name="ID" uuid="6040B27FA16440968B1C3A0F081BC6BE" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="city" uuid="34B754ED647C408092F52EC64C134629" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="name" uuid="244766A6540B4654A8534BFF25AC1659" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="zipCode" uuid="E3EC98833EAF4BB389B4466AAC84BC37" type="10" limiting_length="255" never_null="true" id="4"/>
+		<field name="state" uuid="93B0B166D97F4797B17A74FBE69AE926" type="10" limiting_length="255" never_null="true" id="5"/>
+		<field name="country" uuid="57C77730B5774F5CBC4EEC86369EAB88" type="10" limiting_length="255" never_null="true" id="6"/>
+		<field name="schoolID" uuid="1C6BC6BE482F4F518CC11324242C9D2D" type="3" never_null="true" id="7"/>
+		<field name="email" uuid="6DC4EEB6ECDB4105AA744586C1735D3F" type="10" limiting_length="255" never_null="true" id="8"/>
+		<field name="phone" uuid="B9F39876CC044F8D84A2F59446E8D65E" type="10" limiting_length="255" never_null="true" id="9"/>
+		<field name="maxStudentsCapacity" uuid="7A9FDD0A559E4F9E891FAB02F9904F84" type="4" never_null="true" id="10">
+			<field_extra multi_line="false">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<primary_key field_name="ID" field_uuid="6040B27FA16440968B1C3A0F081BC6BE"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="11">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="533.3203125" top="1.97265625" width="252.18359375" height="275.71875"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Courses" uuid="AC7E580807664375960A6FDAA7242BE8" id="4">
+		<field name="ID" uuid="DC6FFA96A0AC48EBA5AAAAD428D17AA9" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="7C17089E4A2941B4A3B054C80922FC40" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="schoolID" uuid="28AB3827E4EA427DB69EB31B560E4620" type="4" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="DC6FFA96A0AC48EBA5AAAAD428D17AA9"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="244.203125" top="58.17578125" width="117.5078125" height="124.31640625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Attending" uuid="34644B49BCB54BA2AB4FDCCDB684F68F" id="5">
+		<field name="ID" uuid="C8C03704AAA24567AF8F3EDFE99446F4" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="courseID" uuid="0A19B2F95F194512AA5D6F4EC3479A44" type="4" never_null="true" id="2"/>
+		<field name="studentID" uuid="D5144D85733140CDB5249B999E507A33" type="4" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="C8C03704AAA24567AF8F3EDFE99446F4"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="0" top="104.94921875" width="134.49609375" height="121.625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Grades)" uuid="FF5C1459F2F847EC98C8C86E13967E35" id="6" hide_in_REST="true">
+		<field name="ID" uuid="6B80D37DF2DB4DF4A7E99F28D30FBF34" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="gradesMap" uuid="460EADA1F1B0479993BEFB46AB146D4F" type="21" blob_switch_size="2147483647" never_null="true" id="3"/>
+		<field name="studentID" uuid="E47C4DBE346F42C39F4AE073480BE996" type="4" never_null="true" id="5"/>
+		<primary_key field_name="ID" field_uuid="6B80D37DF2DB4DF4A7E99F28D30FBF34"/>
+		<table_extra trashed="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="523.22265625" top="228.984375" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Table_1)" uuid="554E60FAD4C24083B4E5E9822DAB1410" id="7" hide_in_REST="true">
+		<field name="ID" uuid="CF94620821F146889F1A27913F611500" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<primary_key field_name="ID" field_uuid="CF94620821F146889F1A27913F611500"/>
+		<table_extra trashed="true">
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="775.8515625" top="203.03515625" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Teachers)" uuid="9D61174AFF0944D3BAA3983E2E73B62B" id="8" hide_in_REST="true">
+		<field name="ID" uuid="74AB0F628AB0415C9200A0A14AFCBD0A" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="lastname" uuid="E346A9A4E23341038C75581000B46CF9" type="10" limiting_length="255" never_null="true" id="2"/>
+		<primary_key field_name="ID" field_uuid="74AB0F628AB0415C9200A0A14AFCBD0A"/>
+		<table_extra trashed="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="558.0703125" top="333.3203125" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Teachers_1)" uuid="2C7EEDDEDE7F4187847D4F90B3595E6C" id="9" hide_in_REST="true">
+		<field name="ID" uuid="B0351F5FA5ED4146A533B010BACEC4D8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="lastname" uuid="502647E7E34F47C5A433C3A90630728A" type="10" limiting_length="255" never_null="true" id="2"/>
+		<primary_key field_name="ID" field_uuid="B0351F5FA5ED4146A533B010BACEC4D8"/>
+		<table_extra trashed="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="548.8828125" top="306.078125" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Teachers_2)" uuid="F3A61B693B8648C29CDC1C560F3FD60E" id="10" hide_in_REST="true">
+		<field name="ID" uuid="FA30492567E04A939FA9867D09A7D9FC" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="lastname" uuid="17C5A04EB70B4D368A195646DB345893" type="10" limiting_length="255" never_null="true" id="2"/>
+		<primary_key field_name="ID" field_uuid="FA30492567E04A939FA9867D09A7D9FC"/>
+		<table_extra trashed="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="559.95703125" top="303.640625" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="(Teachers_3)" uuid="ABDA955C554D4CD8BD3DA5DAC95CFC0A" id="11" hide_in_REST="true">
+		<field name="ID" uuid="0589524D31EB4538BA79269E390E53D6" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="lastname" uuid="9E879015CE694026B804B819ACB93FEB" type="10" limiting_length="255" never_null="true" id="2"/>
+		<primary_key field_name="ID" field_uuid="0589524D31EB4538BA79269E390E53D6"/>
+		<table_extra trashed="true">
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="536.62109375" top="295.13671875" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="40FB60E9EB694956A39AC186178B65BE" name_Nto1="school" name_1toN="courses" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="28AB3827E4EA427DB69EB31B560E4620" name="schoolID">
+				<table_ref uuid="AC7E580807664375960A6FDAA7242BE8" name="Courses"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="6040B27FA16440968B1C3A0F081BC6BE" name="ID">
+				<table_ref uuid="2713146E10A344DEB883CC3E0EF45592" name="Schools"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="43F0DDEF3730444EBE98F5D83653DDBB" name_Nto1="course" name_1toN="attendedBy" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="0A19B2F95F194512AA5D6F4EC3479A44" name="courseID">
+				<table_ref uuid="34644B49BCB54BA2AB4FDCCDB684F68F" name="Attending"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="DC6FFA96A0AC48EBA5AAAAD428D17AA9" name="ID">
+				<table_ref uuid="AC7E580807664375960A6FDAA7242BE8" name="Courses"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="C4938A9DA057479B9EAFCD48220CA5B2" name_Nto1="student" name_1toN="attends" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="D5144D85733140CDB5249B999E507A33" name="studentID">
+				<table_ref uuid="34644B49BCB54BA2AB4FDCCDB684F68F" name="Attending"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="3143163C978447F5B300CF6B4B94BF04" name="ID">
+				<table_ref uuid="5282F539D733401484D055432019BEFE" name="Students"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="22A44E3B6AC14EBBAFEAB72ACC3E89D5" type="7">
+		<field_ref uuid="3143163C978447F5B300CF6B4B94BF04" name="ID">
+			<table_ref uuid="5282F539D733401484D055432019BEFE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="2AD3C43DEDB74777895C20F4FA6031AA" type="7">
+		<field_ref uuid="FA30492567E04A939FA9867D09A7D9FC" name="ID">
+			<table_ref uuid="F3A61B693B8648C29CDC1C560F3FD60E" name="(Teachers_2)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="30C5C3F5CA57462A891F01351E4F41B8" type="7">
+		<field_ref uuid="6040B27FA16440968B1C3A0F081BC6BE" name="ID">
+			<table_ref uuid="2713146E10A344DEB883CC3E0EF45592" name="Schools"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="42529FEB3B234E659DADA86FB5D8AB19" type="7">
+		<field_ref uuid="CF94620821F146889F1A27913F611500" name="ID">
+			<table_ref uuid="554E60FAD4C24083B4E5E9822DAB1410" name="(Table_1)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="495CB1C6DF234C8896AB64EBC79D0F0A" type="7">
+		<field_ref uuid="6B80D37DF2DB4DF4A7E99F28D30FBF34" name="ID">
+			<table_ref uuid="FF5C1459F2F847EC98C8C86E13967E35" name="(Grades)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5383C39B3E214418AADDC225F772B487" type="7">
+		<field_ref uuid="B0351F5FA5ED4146A533B010BACEC4D8" name="ID">
+			<table_ref uuid="2C7EEDDEDE7F4187847D4F90B3595E6C" name="(Teachers_1)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="61B20ACCB50F4C7CAA271790CFE37E2C" type="7">
+		<field_ref uuid="0589524D31EB4538BA79269E390E53D6" name="ID">
+			<table_ref uuid="ABDA955C554D4CD8BD3DA5DAC95CFC0A" name="(Teachers_3)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="62A84010A7ED4C38A752F39DF979DFB4" type="7">
+		<field_ref uuid="DC6FFA96A0AC48EBA5AAAAD428D17AA9" name="ID">
+			<table_ref uuid="AC7E580807664375960A6FDAA7242BE8" name="Courses"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="62E5ED55AE794D9DBF7E84BC2A3CC92A" type="7">
+		<field_ref uuid="A2077F2D63BE452AA48CC00FD464DA45" name="hasDrivingLicence">
+			<table_ref uuid="5282F539D733401484D055432019BEFE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="7291A07AC2674C5DAA4381FE7D7C7B5A" type="7">
+		<field_ref uuid="088318FEBEB04AE586D2B90FD72E6163" name="firstname">
+			<table_ref uuid="5282F539D733401484D055432019BEFE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="7318DCC92D584A6F80497441093EAECB" type="7">
+		<field_ref uuid="C8C03704AAA24567AF8F3EDFE99446F4" name="ID">
+			<table_ref uuid="34644B49BCB54BA2AB4FDCCDB684F68F" name="Attending"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="B17E3BF54450493DB72FBD48A5745784" type="7">
+		<field_ref uuid="C6DBB917EEE44AF9BDA57ABA22C55C6B" name="ID">
+			<table_ref uuid="107A367EBCC346259FD971E8FC1097DA" name="(INFO)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="E9D972FCA0104824B48898AA00582870" type="7">
+		<field_ref uuid="74AB0F628AB0415C9200A0A14AFCBD0A" name="ID">
+			<table_ref uuid="9D61174AFF0944D3BAA3983E2E73B62B" name="(Teachers)"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FAE33C11BDB845EDBEE4AC61C5776035" type="7">
+		<field_ref uuid="1F17092C15024F79B5D4DA478CF71887" name="state">
+			<table_ref uuid="5282F539D733401484D055432019BEFE" name="Students"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FBEA46423E9B4CB5BB7AE774FE87D7A1" type="7">
+		<field_ref uuid="53683A56581D4116BB0D06F39656FF01" name="lastname">
+			<table_ref uuid="5282F539D733401484D055432019BEFE" name="Students"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0" package_name="HDI_Template_v18" structure_file_name="HowDoI" data_file_path=":HowDoI.4DD">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>
