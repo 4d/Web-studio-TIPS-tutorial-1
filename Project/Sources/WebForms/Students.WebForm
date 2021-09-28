@@ -412,7 +412,8 @@
 					"flexDirection": "row",
 					"alignItems": "center",
 					"borderColor": "#C6C6C7",
-					"marginTop": "10px"
+					"marginTop": "10px",
+					"borderRadius": "50px"
 				}
 			},
 			"displayName": "StyleBox",
@@ -1553,7 +1554,8 @@
 			"isCanvas": true,
 			"props": {
 				"className": "h-full",
-				"events": []
+				"events": [],
+				"hidden": false
 			},
 			"displayName": "StyleBox",
 			"custom": {},
@@ -1573,7 +1575,8 @@
 			"props": {
 				"className": "h-full",
 				"events": [],
-				"style": {}
+				"style": {},
+				"hidden": false
 			},
 			"displayName": "StyleBox",
 			"custom": {},
