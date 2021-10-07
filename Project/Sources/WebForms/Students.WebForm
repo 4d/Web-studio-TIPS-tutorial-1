@@ -378,7 +378,8 @@
 			"hidden": false,
 			"nodes": [
 				"VbYlfSWHu",
-				"VLthta2Vt"
+				"VLthta2Vt",
+				"-NWYHtWwg"
 			],
 			"linkedNodes": {},
 			"parent": "ROOT"
@@ -1598,6 +1599,78 @@
 			],
 			"linkedNodes": {},
 			"parent": "YvL1YKVj8"
+		},
+		"-NWYHtWwg": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Utiliser event OnSelect sur Matrix + Datatable",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "pour alimenter les datasources "
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "Pas de computed attributes de type entitySel / entity"
+							}
+						]
+					}
+				],
+				"text": "<p><b>Utiliser event OnSelect sur Matrix + Datatable</b></p> <p><b>pour alimenter les datasources </b></p> <p><b></b></p> <p><b>Pas de computed attributes de type entitySel / entity</b></p>",
+				"style": {
+					"color": "#e73351ff"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "SvNMw9NDf"
 		}
 	}
 }

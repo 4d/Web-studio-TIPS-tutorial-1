@@ -98,5 +98,3 @@ exposed Function get fullname()->$result : Text
 exposed Function get drivingLicenseAsString()->$result : Text
 	$result:=Choose:C955(This:C1470.hasDrivingLicence=True:C214; "Yes", ; "No")
 	
-exposed Function get attendedCourses->$result : cs:C1710.CoursesSelection
-	$result:=This:C1470.attends.course
