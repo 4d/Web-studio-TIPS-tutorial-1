@@ -12,10 +12,9 @@ local exposed Function age
 	$0:=$result
 	
 	
-	//exposed Function attendedCourses
-	//var $0 : cs.CoursesSelection
+exposed Function attendedCourses()->$result : cs:C1710.CoursesSelection
+	$result:=This:C1470.attends.course
 	
-	//$0:=This.attends.course
 	
 exposed Function notAttendedCourses
 	var $0; $studentCourses; $allCourses : cs:C1710.CoursesSelection

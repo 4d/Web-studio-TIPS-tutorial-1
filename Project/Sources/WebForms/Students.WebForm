@@ -30,21 +30,53 @@
 				"events": []
 			},
 			{
-				"id": "currentCourse",
+				"id": "attendedCourses",
 				"from": "",
 				"dataclass": "Courses",
 				"dataType": "",
-				"type": "entity",
+				"type": "entitysel",
 				"initialValue": "",
 				"events": []
 			},
 			{
-				"id": "attendee",
+				"id": "attendees",
 				"from": "",
 				"dataclass": "Students",
 				"dataType": "",
-				"type": "entity",
+				"type": "entitysel",
 				"initialValue": "",
+				"events": []
+			},
+			{
+				"id": "currentCourse",
+				"from": "attendedCourses",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": [
+					{
+						"events": [
+							"onChange"
+						],
+						"id": "r6PgGrXQvKD3LkmguGCmsz",
+						"method": "currentCourse.attendees",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.StudentsSelection",
+							"datasource": "attendees"
+						}
+					}
+				]
+			},
+			{
+				"id": "attendee",
+				"from": "attendees",
+				"dataclass": "Students",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
 				"events": []
 			}
 		],
@@ -121,6 +153,13 @@
 				"parentId": null,
 				"scope": "local",
 				"id": "CR5FLkYmrXIBl9sZM014H"
+			},
+			{
+				"name": "containserSB",
+				"content": "self {\nbox-shadow: 0px 3px 26px #00000029;\nborder-radius: 35px;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "4-wHwugH-PB4Q-fNsGSC-"
 			}
 		]
 	},
@@ -134,7 +173,11 @@
 				"className": "bg-white min-h-full w-full px-8",
 				"events": [],
 				"style": {
-					"width": "1200px"
+					"width": "100%",
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"justifyContent": "center"
 				},
 				"isInsideCanvas": false,
 				"classNames": [
@@ -158,7 +201,7 @@
 			"props": {
 				"events": [],
 				"style": {
-					"width": "30%",
+					"width": "25%",
 					"height": "90%",
 					"display": "flex",
 					"flexDirection": "column",
@@ -191,7 +234,21 @@
 				"orientation": "vertical",
 				"datasource": "students",
 				"currentElement": "student",
-				"events": []
+				"events": [
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "wYpK8GiUByw43L1dyJjprg",
+						"method": "student.attendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
+						}
+					}
+				]
 			},
 			"displayName": "Matrix",
 			"custom": {},
@@ -370,16 +427,19 @@
 					"display": "flex",
 					"flexDirection": "row",
 					"justifyContent": "flex-start",
-					"marginTop": "20px"
-				}
+					"marginTop": "20px",
+					"width": "1200px"
+				},
+				"classNames": [
+					"containserSB"
+				]
 			},
 			"displayName": "StyleBox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
 				"VbYlfSWHu",
-				"VLthta2Vt",
-				"-NWYHtWwg"
+				"VLthta2Vt"
 			],
 			"linkedNodes": {},
 			"parent": "ROOT"
@@ -1334,9 +1394,10 @@
 				"events": [],
 				"style": {
 					"height": "400px",
-					"width": "300px"
+					"width": "300px",
+					"marginTop": "10px"
 				},
-				"datasource": "student.attendedCourses",
+				"datasource": "attendedCourses",
 				"currentElement": "currentCourse",
 				"columns": [
 					{
@@ -1372,23 +1433,38 @@
 			"props": {
 				"deletable": true,
 				"moveable": true,
-				"datasource": "",
+				"datasource": "attendedCourses.length",
 				"events": [],
 				"doc": [
 					{
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Attended courses",
+								"text": "Attended courses (",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "attendedCourses.length",
+								"isDataSource": true
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ")"
 							}
 						]
 					}
 				],
-				"text": "<p>Attended courses</p>",
+				"text": "<p>Attended courses (attendedCourses.length)</p>",
 				"style": {},
 				"classNames": [
 					"blueText"
@@ -1409,43 +1485,6 @@
 			"props": {
 				"deletable": true,
 				"moveable": true,
-				"datasource": "",
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Course information",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"text": "<p>Course information</p>",
-				"style": {},
-				"classNames": [
-					"blueText"
-				]
-			},
-			"displayName": "Text",
-			"custom": {},
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {},
-			"parent": "sRpkGIKKD"
-		},
-		"MC_3cggW0": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"deletable": true,
-				"moveable": true,
 				"datasource": "currentCourse.numberOfAttendees",
 				"events": [],
 				"doc": [
@@ -1453,7 +1492,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Number of attendees: ",
+								"text": "Course attendees (",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1464,52 +1503,24 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"isDataSource": true,
-								"text": "currentCourse.numberOfAttendees"
-							}
-						]
-					}
-				],
-				"text": "<p>Number of attendees: currentCourse.numberOfAttendees</p>",
-				"style": {
-					"marginTop": "10px"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {},
-			"parent": "sRpkGIKKD"
-		},
-		"kG23asYtm7": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"deletable": true,
-				"moveable": true,
-				"datasource": "",
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
+								"text": "currentCourse.numberOfAttendees",
+								"isDataSource": true
+							},
 							{
-								"text": "They attend the course:",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
-								"strikethrough": false
+								"strikethrough": false,
+								"text": ")"
 							}
 						]
 					}
 				],
-				"text": "<p>They attend the course:</p>",
-				"style": {
-					"marginTop": "10px"
-				}
+				"text": "<p>Course attendees (currentCourse.numberOfAttendees)</p>",
+				"style": {},
+				"classNames": [
+					"blueText"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -1527,9 +1538,10 @@
 				"events": [],
 				"style": {
 					"width": "300px",
-					"marginTop": "10px"
+					"marginTop": "10px",
+					"height": "400px"
 				},
-				"datasource": "currentCourse.students",
+				"datasource": "attendees",
 				"currentElement": "attendee",
 				"columns": [
 					{
@@ -1593,84 +1605,10 @@
 			"hidden": false,
 			"nodes": [
 				"qTMIp4XqGr",
-				"MC_3cggW0",
-				"kG23asYtm7",
 				"ZJ5Sr-EDI"
 			],
 			"linkedNodes": {},
 			"parent": "YvL1YKVj8"
-		},
-		"-NWYHtWwg": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"deletable": true,
-				"moveable": true,
-				"datasource": "",
-				"events": [],
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Utiliser event OnSelect sur Matrix + Datatable",
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "pour alimenter les datasources "
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": ""
-							}
-						]
-					},
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"bold": true,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false,
-								"text": "Pas de computed attributes de type entitySel / entity"
-							}
-						]
-					}
-				],
-				"text": "<p><b>Utiliser event OnSelect sur Matrix + Datatable</b></p> <p><b>pour alimenter les datasources </b></p> <p><b></b></p> <p><b>Pas de computed attributes de type entitySel / entity</b></p>",
-				"style": {
-					"color": "#e73351ff"
-				}
-			},
-			"displayName": "Text",
-			"custom": {},
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {},
-			"parent": "SvNMw9NDf"
 		}
 	}
 }
