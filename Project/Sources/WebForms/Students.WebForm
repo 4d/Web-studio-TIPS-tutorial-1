@@ -184,7 +184,7 @@
 					"fontAndColor"
 				]
 			},
-			"displayName": "WebForm",
+			"displayName": "Webform",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -208,7 +208,7 @@
 					"justifyContent": "space-between"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -278,7 +278,7 @@
 					"matrixSB"
 				]
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -319,7 +319,7 @@
 					"marginLeft": "10px"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -368,7 +368,7 @@
 				"events": [],
 				"style": {}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -434,7 +434,7 @@
 					"containserSB"
 				]
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -455,7 +455,7 @@
 					"width": "60%"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -486,7 +486,7 @@
 					"borderRadius": "50px"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -529,7 +529,7 @@
 				"style": {},
 				"labelPosition": "hidden"
 			},
-			"displayName": "Text Input",
+			"displayName": "Text input",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
@@ -563,7 +563,7 @@
 			"isCanvas": false,
 			"props": {
 				"deletable": false,
-				"className": "fd-input w-full",
+				"className": "fd-input w-full bg-transparent",
 				"type": "text",
 				"events": [
 					{
@@ -619,7 +619,7 @@
 					"alignItems": "center"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -642,7 +642,7 @@
 					"alignItems": "center"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -776,7 +776,7 @@
 					"justifyContent": "center"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -820,7 +820,7 @@
 					"borderBottomColor": "#e7e7e7"
 				}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -876,7 +876,7 @@
 				"events": [],
 				"style": {}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -993,7 +993,7 @@
 				"classNames": [],
 				"hidden": false
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -1088,7 +1088,7 @@
 				"hidden": false,
 				"events": []
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -1244,7 +1244,7 @@
 				"events": [],
 				"style": {}
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -1263,7 +1263,7 @@
 				"className": "h-full",
 				"hidden": false
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -1418,7 +1418,7 @@
 					}
 				]
 			},
-			"displayName": "DataTable",
+			"displayName": "Datatable",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
@@ -1562,7 +1562,7 @@
 					}
 				]
 			},
-			"displayName": "DataTable",
+			"displayName": "Datatable",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
@@ -1579,7 +1579,7 @@
 				"events": [],
 				"hidden": false
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
@@ -1600,7 +1600,7 @@
 				"style": {},
 				"hidden": false
 			},
-			"displayName": "StyleBox",
+			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
