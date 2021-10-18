@@ -16,12 +16,11 @@ exposed Function attendedCourses()->$result : cs:C1710.CoursesSelection
 	$result:=This:C1470.attends.course
 	
 	
-exposed Function notAttendedCourses
-	var $0; $studentCourses; $allCourses : cs:C1710.CoursesSelection
+exposed Function notAttendedCourses()->$result : cs:C1710.CoursesSelection
 	
 	$studentCourses:=This:C1470.attends.course
 	$allCourses:=ds:C1482.Courses.all()
-	$0:=$allCourses.minus($studentCourses)
+	$result:=$allCourses.minus($studentCourses)
 	
 exposed Function attendsTo
 	var $0 : cs:C1710.StudentsEntity

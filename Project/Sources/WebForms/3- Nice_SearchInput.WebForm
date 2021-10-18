@@ -205,35 +205,32 @@
 			"custom": {},
 			"hidden": false,
 			"nodes": [
-				"Ji4tN1P2B",
+				"X0h1gZXUQ",
 				"r0L7azalG"
 			],
 			"linkedNodes": {},
 			"parent": "ROOT"
 		},
-		"y6pRX3txN": {
+		"X0h1gZXUQ": {
 			"type": {
 				"resolvedName": "TextInput"
 			},
 			"isCanvas": false,
 			"props": {
 				"placeholder": "placeholder",
-				"label": "label",
-				"events": [],
-				"style": {},
-				"labelPosition": "hidden"
+				"label": "label"
 			},
 			"displayName": "Text input",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
-				"label": "qo37ZcjdH",
-				"input": "H0mZD5TT9J"
+				"label": "IdWK_0SkQ",
+				"input": "n1jikQlbbu"
 			},
-			"parent": "Ji4tN1P2B"
+			"parent": "A26vKHIe1"
 		},
-		"qo37ZcjdH": {
+		"IdWK_0SkQ": {
 			"type": {
 				"resolvedName": "Label"
 			},
@@ -242,16 +239,18 @@
 				"moveable": false,
 				"events": [],
 				"style": {},
-				"text": "Search"
+				"text": "Search",
+				"deletable": true,
+				"hidden": false
 			},
 			"displayName": "Label",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {},
-			"parent": "y6pRX3txN"
+			"parent": "X0h1gZXUQ"
 		},
-		"H0mZD5TT9J": {
+		"n1jikQlbbu": {
 			"type": {
 				"resolvedName": "Input"
 			},
@@ -260,20 +259,19 @@
 				"deletable": false,
 				"className": "fd-input w-full bg-transparent",
 				"type": "text",
-				"datasource": "search",
 				"events": [
 					{
 						"events": [
 							"onchange"
 						],
-						"id": "nmrSUBDAgP3LTFgrf4fcRX",
+						"id": "eoaK3RvW6n9KKi99QkUsRY",
 						"method": "ds.Students.search",
 						"params": [
 							{
 								"name": "$search",
 								"type": "Text",
 								"datasource": "search",
-								"id": "d3jGJWjeSPu2RN6TGwXpwu"
+								"id": "3g6ts68C444Tg1GYEyksaC"
 							}
 						],
 						"returns": {
@@ -283,10 +281,10 @@
 						}
 					}
 				],
-				"style": {
-					"borderColor": "transparent",
-					"height": "30px"
-				},
+				"datasource": "search",
+				"style": {},
+				"moveable": false,
+				"placeholder": "",
 				"hidden": false
 			},
 			"displayName": "Input",
@@ -294,57 +292,7 @@
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {},
-			"parent": "y6pRX3txN"
-		},
-		"Ji4tN1P2B": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"style": {
-					"borderColor": "#C6C6C7",
-					"width": "240px",
-					"borderWidth": "1px",
-					"borderRadius": "50px",
-					"marginTop": "20px",
-					"display": "flex",
-					"flexDirection": "row",
-					"alignItems": "center",
-					"justifyContent": "space-between"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"hidden": false,
-			"nodes": [
-				"Ur9EYHDcK",
-				"y6pRX3txN"
-			],
-			"linkedNodes": {},
-			"parent": "A26vKHIe1"
-		},
-		"Ur9EYHDcK": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"icon": "fa-search",
-				"events": [],
-				"style": {
-					"color": "#C6C6C7",
-					"fontSize": "30px"
-				}
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {},
-			"parent": "Ji4tN1P2B"
+			"parent": "X0h1gZXUQ"
 		}
 	}
 }

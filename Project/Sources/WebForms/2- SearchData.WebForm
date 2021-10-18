@@ -19,6 +19,15 @@
 				"type": "entity",
 				"initialValue": "first",
 				"events": []
+			},
+			{
+				"id": "search",
+				"type": "scalar",
+				"from": "",
+				"dataclass": "",
+				"initialValue": "",
+				"dataType": "string",
+				"events": []
 			}
 		],
 		"styles": []
@@ -194,10 +203,89 @@
 			"custom": {},
 			"hidden": false,
 			"nodes": [
+				"X0h1gZXUQ",
 				"r0L7azalG"
 			],
 			"linkedNodes": {},
 			"parent": "ROOT"
+		},
+		"X0h1gZXUQ": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"placeholder": "placeholder",
+				"label": "label"
+			},
+			"displayName": "Text input",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "IdWK_0SkQ",
+				"input": "n1jikQlbbu"
+			},
+			"parent": "A26vKHIe1"
+		},
+		"IdWK_0SkQ": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"moveable": false,
+				"events": [],
+				"style": {},
+				"text": "Search"
+			},
+			"displayName": "Label",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "X0h1gZXUQ"
+		},
+		"n1jikQlbbu": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": false,
+				"className": "fd-input w-full bg-transparent",
+				"type": "text",
+				"events": [
+					{
+						"events": [
+							"onchange"
+						],
+						"id": "eoaK3RvW6n9KKi99QkUsRY",
+						"method": "ds.Students.search",
+						"params": [
+							{
+								"name": "$search",
+								"type": "Text",
+								"datasource": "search",
+								"id": "3g6ts68C444Tg1GYEyksaC"
+							}
+						],
+						"returns": {
+							"name": "$result",
+							"type": "cs.StudentsSelection",
+							"datasource": "students"
+						}
+					}
+				],
+				"datasource": "search",
+				"style": {}
+			},
+			"displayName": "Input",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "X0h1gZXUQ"
 		}
 	}
 }

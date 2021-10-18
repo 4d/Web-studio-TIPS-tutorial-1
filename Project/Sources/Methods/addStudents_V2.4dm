@@ -95,14 +95,17 @@ For each ($student; ds:C1482.Students.all())
 	
 	$randomCourse:=(Random:C100%16)+1
 	
+	$availableCourses:=ds:C1482.Courses.all()
+	
 	For ($i; 1; $randomCourse)
-		$lengthMinus2:=ds:C1482.Courses.all().length-2
+		$lengthMinus2:=$availableCourses.length-2
 		$random:=(Random:C100%$lengthMinus2)+0
-		$course:=ds:C1482.Courses.all().slice($random; $random+1).first()
+		$course:=$availableCourses.slice($random; $random+1).first()
 		$attending:=ds:C1482.Attending.new()
 		$attending.student:=$student
 		$attending.course:=$course
 		$status:=$attending.save()
+		$availableCourses:=$availableCourses.minus($course)
 	End for 
 	
 End for each 

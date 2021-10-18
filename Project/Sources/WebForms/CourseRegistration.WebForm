@@ -1,0 +1,1160 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [
+			{
+				"id": "students",
+				"from": "",
+				"dataclass": "Students",
+				"dataType": "",
+				"type": "entitysel",
+				"initialValue": "all",
+				"events": []
+			},
+			{
+				"id": "student",
+				"from": "students",
+				"dataclass": "Students",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			},
+			{
+				"id": "search",
+				"type": "scalar",
+				"from": "",
+				"dataclass": "",
+				"initialValue": "",
+				"dataType": "string",
+				"events": []
+			},
+			{
+				"id": "notAttendedCourses",
+				"from": "",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entitysel",
+				"initialValue": "all",
+				"events": []
+			},
+			{
+				"id": "notAttendedCourse",
+				"from": "notAttendedCourses",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			},
+			{
+				"id": "attendedCourses",
+				"from": "",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entitysel",
+				"initialValue": "all",
+				"events": []
+			},
+			{
+				"id": "currentAttendedCourse",
+				"from": "attendedCourses",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			}
+		],
+		"styles": [
+			{
+				"name": "photo",
+				"content": "self {\nwidth : 50px;\nheight: 50px;\nmin-width: 50px;\nmin-height: 50px;\nborder-radius : 50%;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "HB6e3GBt9wtXVJre6xTNg"
+			},
+			{
+				"name": "subTitleStyleBlue",
+				"content": "self {\nfont-weight: 700;\nfont-size: 20px;\ncolor: #2289FF;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "mOZ75h74eBtZjoj9O2cXb"
+			},
+			{
+				"name": "fontAndColor",
+				"content": "self {\nfont-family: Helvetica, sans-serif;\ncolor:#14395B;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "SKfvFX5O5H8c3bRf1xSSn"
+			},
+			{
+				"name": "title",
+				"content": "self {\nfont-size : 26px;\ncolor : #2289FF;\nfont-weight: 700;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "U84nPNP-ats1zGNd8h36C"
+			},
+			{
+				"name": "matrixSB",
+				"content": "self {\n border-bottom-width : 1px;\n  border-bottom-color : #e7e7e7;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "-wZS6uL2_graupRbTIwEk"
+			},
+			{
+				"name": "draft",
+				"content": "self {\n  height : 60px;\n  display : flex;\n  flex-direction : row;\n  align-items : center;\n  justify-content : space-between;\n  border-bottom-width : 2px;\n  border-bottom-color : #3b82f6ff;\n}",
+				"children": {},
+				"parentId": null,
+				"scope": "local",
+				"origin": "Z-MSLvpt5",
+				"id": "B7hIdD7EXjqxUFjiWSDFx"
+			},
+			{
+				"id": "ytmLBS7fmKJyGbTlwkO3N",
+				"name": "subTitleStyleGrey",
+				"content": "self {\ncolor : #838383ff;\n}",
+				"scope": "local",
+				"parentId": null,
+				"children": {}
+			},
+			{
+				"name": "blueText",
+				"content": "self {\nfont-size: 20px;\ncolor: #2289FF;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "jgbgZZ7ukDHbQdteViCKg"
+			},
+			{
+				"name": "lab",
+				"content": "self {\n\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "iapEG1UAIQA_OUnZ6O6vb"
+			},
+			{
+				"name": "matrixStyle",
+				"content": "self {\n border-width : 1px;\n  border-color : #e7e7e7;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "CR5FLkYmrXIBl9sZM014H"
+			},
+			{
+				"name": "containserSB",
+				"content": "self {\nbox-shadow: 0px 3px 26px #00000029;\nborder-radius: 35px;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "4-wHwugH-PB4Q-fNsGSC-"
+			}
+		]
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {
+					"width": "100%",
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"justifyContent": "center"
+				},
+				"isInsideCanvas": false,
+				"classNames": [
+					"fontAndColor"
+				]
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"SvNMw9NDf"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"VbYlfSWHu": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "25%",
+					"height": "90%",
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "space-between"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"BHcyhpTCq",
+				"X-LdMXdPO"
+			],
+			"linkedNodes": {},
+			"parent": "SvNMw9NDf"
+		},
+		"X-LdMXdPO": {
+			"type": {
+				"resolvedName": "Matrix"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [
+					"matrixStyle"
+				],
+				"style": {
+					"height": "600px",
+					"marginTop": "10px"
+				},
+				"orientation": "vertical",
+				"datasource": "students",
+				"currentElement": "student",
+				"events": [
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "r5bMpiJEfRVnbEZ5JmFRNu",
+						"method": "student.notAttendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "notAttendedCourses"
+						}
+					},
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "5HAiPwu7rQB4TFWPottm1f",
+						"method": "student.attendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
+						}
+					}
+				]
+			},
+			"displayName": "Matrix",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"container": "Z-MSLvpt5"
+			},
+			"parent": "VbYlfSWHu"
+		},
+		"Z-MSLvpt5": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"style": {
+					"height": "60px",
+					"display": "flex",
+					"flexDirection": "row",
+					"justifyContent": "space-between",
+					"alignItems": "center"
+				},
+				"events": [],
+				"hidden": false,
+				"classNames": [
+					"matrixSB"
+				]
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"yjzmiEmCv",
+				"NNWItX4ji"
+			],
+			"linkedNodes": {},
+			"parent": "X-LdMXdPO"
+		},
+		"yjzmiEmCv": {
+			"type": {
+				"resolvedName": "Image"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [
+					"photo"
+				],
+				"style": {},
+				"events": [],
+				"datasource": "student.photo"
+			},
+			"displayName": "Image",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "Z-MSLvpt5"
+		},
+		"NNWItX4ji": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"marginLeft": "10px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"P2CPRqOE2"
+			],
+			"linkedNodes": {},
+			"parent": "Z-MSLvpt5"
+		},
+		"P2CPRqOE2": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "student.fullname",
+				"events": [],
+				"style": {},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"isDataSource": true,
+								"text": "student.fullname"
+							}
+						]
+					}
+				],
+				"text": "<p>student.fullname</p>"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "NNWItX4ji"
+		},
+		"BHcyhpTCq": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"s9CoHl9g6",
+				"cqxmVzOXs",
+				"2AKX9d2FX"
+			],
+			"linkedNodes": {},
+			"parent": "VbYlfSWHu"
+		},
+		"jqE9R7rRc": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Students",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Students</p>",
+				"style": {},
+				"classNames": [
+					"title"
+				]
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "s9CoHl9g6"
+		},
+		"SvNMw9NDf": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "row",
+					"justifyContent": "flex-start",
+					"marginTop": "20px",
+					"width": "1200px"
+				},
+				"classNames": [
+					"containserSB"
+				]
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"VbYlfSWHu",
+				"VLthta2Vt"
+			],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"VLthta2Vt": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "60%"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"oV8UV0o9A",
+				"zoYitmwhj"
+			],
+			"linkedNodes": {},
+			"parent": "SvNMw9NDf"
+		},
+		"2AKX9d2FX": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"height": "40px",
+					"borderWidth": "1px",
+					"display": "flex",
+					"justifyContent": "flex-start",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"borderColor": "#C6C6C7",
+					"marginTop": "10px",
+					"borderRadius": "50px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"mw-5yVmuH",
+				"Fgw6KiCfX"
+			],
+			"linkedNodes": {},
+			"parent": "BHcyhpTCq"
+		},
+		"mw-5yVmuH": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"icon": "fa-search",
+				"events": [],
+				"style": {
+					"fontSize": "30px",
+					"color": "#C6C6C7"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "2AKX9d2FX"
+		},
+		"Fgw6KiCfX": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"placeholder": "placeholder",
+				"label": "label",
+				"events": [],
+				"style": {},
+				"labelPosition": "hidden"
+			},
+			"displayName": "Text input",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "ck9TTPpU9",
+				"input": "dN6k9rwJQp"
+			},
+			"parent": "2AKX9d2FX"
+		},
+		"ck9TTPpU9": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"moveable": false,
+				"text": "Search",
+				"deletable": true
+			},
+			"displayName": "Label",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "Fgw6KiCfX"
+		},
+		"dN6k9rwJQp": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": false,
+				"className": "fd-input w-full bg-transparent",
+				"type": "text",
+				"events": [
+					{
+						"events": [
+							"onchange"
+						],
+						"id": "f1j63fp5UX35HxnAMFX6HU",
+						"method": "ds.Students.search",
+						"params": [
+							{
+								"name": "$search",
+								"type": "Text",
+								"datasource": "search",
+								"id": "hMuMC7QU9yWFz8W6M8yMER"
+							}
+						],
+						"returns": {
+							"name": "$result",
+							"type": "cs.StudentsSelection",
+							"datasource": "students"
+						}
+					}
+				],
+				"style": {
+					"width": "100%",
+					"borderWidth": "0px",
+					"marginLeft": "10px",
+					"borderColor": "transparent"
+				},
+				"datasource": "search",
+				"placeholder": "e.g. Smith",
+				"moveable": false,
+				"hidden": false
+			},
+			"displayName": "Input",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "Fgw6KiCfX"
+		},
+		"s9CoHl9g6": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"jqE9R7rRc"
+			],
+			"linkedNodes": {},
+			"parent": "BHcyhpTCq"
+		},
+		"cqxmVzOXs": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"display": "flex",
+					"justifyContent": "flex-start",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"2wJ-YUvRXs",
+				"Fny2yBcBqG",
+				"ONmsELZ03q"
+			],
+			"linkedNodes": {},
+			"parent": "BHcyhpTCq"
+		},
+		"2wJ-YUvRXs": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Showing",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Showing</p>",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "cqxmVzOXs"
+		},
+		"Fny2yBcBqG": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "students.length",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true,
+								"text": "students.length"
+							}
+						]
+					}
+				],
+				"text": "<p>students.length</p>",
+				"style": {
+					"marginLeft": "5px"
+				},
+				"classNames": [
+					"subTitleStyleBlue"
+				]
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "cqxmVzOXs"
+		},
+		"ONmsELZ03q": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "students",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>students</p>",
+				"style": {
+					"marginLeft": "5px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "cqxmVzOXs"
+		},
+		"oV8UV0o9A": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"oa4LDpWIrb"
+			],
+			"linkedNodes": {},
+			"parent": "VLthta2Vt"
+		},
+		"oa4LDpWIrb": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Course registration",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Course registration</p>",
+				"style": {},
+				"classNames": [
+					"title"
+				]
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "oV8UV0o9A"
+		},
+		"zoYitmwhj": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"marginTop": "120px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"UnSk8N4CG"
+			],
+			"linkedNodes": {},
+			"parent": "VLthta2Vt"
+		},
+		"UnSk8N4CG": {
+			"type": {
+				"resolvedName": "Columns"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"rows": [
+					{
+						"id": "9baDygg7pLjhdzAVeqgWM5"
+					}
+				],
+				"columns": [
+					{
+						"id": "pqECpoLFj9EsYTK9VPwdg6"
+					},
+					{
+						"id": "um55xwSQrPAc1d9rxNmJ2T"
+					}
+				],
+				"spacingX": "2",
+				"spacingY": "2",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Columns",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"pqECpoLFj9EsYTK9VPwdg69baDygg7pLjhdzAVeqgWM5": "ClpXodmyE",
+				"um55xwSQrPAc1d9rxNmJ2T9baDygg7pLjhdzAVeqgWM5": "W243CYcsrV"
+			},
+			"parent": "zoYitmwhj"
+		},
+		"ClpXodmyE": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"alignItems": "start",
+					"justifyContent": "center"
+				},
+				"hidden": false
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"Ugsud8qtA",
+				"JPePun7Z-"
+			],
+			"linkedNodes": {},
+			"parent": "UnSk8N4CG"
+		},
+		"W243CYcsrV": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"hidden": false,
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"tB0fUSCLP",
+				"iSyDF-E4i"
+			],
+			"linkedNodes": {},
+			"parent": "UnSk8N4CG"
+		},
+		"Ugsud8qtA": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Available courses",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Available courses</p>",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ClpXodmyE"
+		},
+		"JPePun7Z-": {
+			"type": {
+				"resolvedName": "Matrix"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"style": {
+					"height": "500px",
+					"borderColor": "#3b82f6ff",
+					"width": "300px",
+					"borderWidth": "2px"
+				},
+				"orientation": "vertical",
+				"datasource": "notAttendedCourses",
+				"currentElement": "notAttendedCourse",
+				"events": []
+			},
+			"displayName": "Matrix",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"container": "JGUUSLdFi"
+			},
+			"parent": "ClpXodmyE"
+		},
+		"JGUUSLdFi": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"style": {
+					"height": "50px"
+				},
+				"hidden": false,
+				"events": []
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"WV-KGnPS0"
+			],
+			"linkedNodes": {},
+			"parent": "JPePun7Z-"
+		},
+		"WV-KGnPS0": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "notAttendedCourse.name",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "notAttendedCourse.name",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							}
+						]
+					}
+				],
+				"text": "<p>notAttendedCourse.name</p>",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "JGUUSLdFi"
+		},
+		"tB0fUSCLP": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Attended courses",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Attended courses</p>",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "W243CYcsrV"
+		},
+		"iSyDF-E4i": {
+			"type": {
+				"resolvedName": "Matrix"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"style": {
+					"height": "500px",
+					"borderColor": "#3b82f6ff",
+					"width": "300px",
+					"borderWidth": "2px"
+				},
+				"orientation": "vertical",
+				"datasource": "attendedCourses",
+				"currentElement": "currentAttendedCourse",
+				"events": []
+			},
+			"displayName": "Matrix",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"container": "oS7K3ePO8l"
+			},
+			"parent": "W243CYcsrV"
+		},
+		"oS7K3ePO8l": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"style": {
+					"height": "50px"
+				},
+				"hidden": false,
+				"events": [],
+				"datasource": "attendedCourses"
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"km8ubC5qNc"
+			],
+			"linkedNodes": {},
+			"parent": "iSyDF-E4i"
+		},
+		"km8ubC5qNc": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "currentAttendedCourse.name",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "currentAttendedCourse.name",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							}
+						]
+					}
+				],
+				"text": "<p>currentAttendedCourse.name</p>",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "oS7K3ePO8l"
+		}
+	}
+}
