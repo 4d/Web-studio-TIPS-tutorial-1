@@ -1,0 +1,90 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [
+			{
+				"id": "choice",
+				"type": "scalar",
+				"from": "",
+				"dataclass": "",
+				"initialValue": "",
+				"dataType": "string",
+				"events": []
+			}
+		],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"eFCiC6Gqn",
+				"XN5QiR4hL"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"eFCiC6Gqn": {
+			"type": {
+				"resolvedName": "Radio"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"defaultValue": "CourseRegistration",
+				"mode": "single",
+				"options": [
+					{
+						"label": "Students",
+						"value": "Students",
+						"id": "m55kvuvd9LnN9w9ZQHpnvZ"
+					},
+					{
+						"label": "Course registration",
+						"value": "CourseRegistration",
+						"id": "qdNidrq8ThpbQMa6m6Vo3b"
+					}
+				],
+				"events": [],
+				"datasource": "choice",
+				"style": {
+					"marginTop": "20px"
+				}
+			},
+			"displayName": "Radio",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"XN5QiR4hL": {
+			"type": {
+				"resolvedName": "WebformLoader"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"datasource": "choice",
+				"style": {}
+			},
+			"displayName": "Webform loader",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		}
+	}
+}

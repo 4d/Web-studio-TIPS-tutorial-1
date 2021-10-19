@@ -252,7 +252,7 @@
 					"matrixStyle"
 				],
 				"style": {
-					"height": "780px",
+					"height": "720px",
 					"marginTop": "10px"
 				},
 				"orientation": "vertical",
@@ -1322,28 +1322,6 @@
 				"OywawrNoK"
 			],
 			"linkedNodes": {},
-			"parent": "uXVJKLV0K"
-		},
-		"uXVJKLV0K": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"style": {
-					"display": "flex",
-					"flexDirection": "row",
-					"justifyContent": "flex-end"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"hidden": false,
-			"nodes": [
-				"g0w0QXR0T"
-			],
-			"linkedNodes": {},
 			"parent": "8X0ZxJt0CV"
 		},
 		"peW3G3bEI": {
@@ -1370,13 +1348,19 @@
 			},
 			"isCanvas": true,
 			"props": {
-				"hidden": false
+				"hidden": false,
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "row",
+					"justifyContent": "center"
+				}
 			},
 			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
-				"uXVJKLV0K"
+				"g0w0QXR0T"
 			],
 			"linkedNodes": {},
 			"parent": "UnSk8N4CG"
