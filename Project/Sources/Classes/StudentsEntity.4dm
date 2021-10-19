@@ -96,3 +96,41 @@ exposed Function get fullname()->$result : Text
 exposed Function get drivingLicenseAsString()->$result : Text
 	$result:=Choose:C955(This:C1470.hasDrivingLicence=True:C214; "Yes", ; "No")
 	
+	
+exposed Function attendsToCourse($course : cs:C1710.CoursesEntity)->$result : cs:C1710.CoursesSelection
+	
+	var $currentCourses; $ordered; $attendedCourses : cs:C1710.CoursesSelection
+	var $aCourse : cs:C1710.CoursesEntity
+	
+	$currentCourses:=This:C1470.attendedCourses()
+	
+	$result:=Null:C1517
+	
+	$ordered:=ds:C1482.Courses.newSelection(dk keep ordered:K85:11)
+	For each ($aCourse; $currentCourses)
+		$ordered.add($aCourse)
+	End for each 
+	$ordered.add($course)
+	
+	$attending:=ds:C1482.Attending.new()
+	$attending.course:=$course
+	$attending.student:=This:C1470
+	$status:=$attending.save()
+	
+	This:C1470.reload()
+	$attendedCourses:=This:C1470.attendedCourses()
+	
+	If ($attendedCourses.length=$ordered.length)
+		$result:=$ordered
+	End if 
+	
+	
+exposed Function cancelAllAttendance()->$result : cs:C1710.CoursesSelection
+	
+	var notDropped : cs:C1710.AttendingSelection
+	
+	$notDropped:=This:C1470.attends.drop()
+	
+	$result:=This:C1470.attendedCourses()
+	
+	

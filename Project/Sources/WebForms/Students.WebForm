@@ -141,13 +141,6 @@
 				"id": "jgbgZZ7ukDHbQdteViCKg"
 			},
 			{
-				"name": "lab",
-				"content": "self {\n\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "iapEG1UAIQA_OUnZ6O6vb"
-			},
-			{
 				"name": "matrixStyle",
 				"content": "self {\n border-width : 1px;\n  border-color : #e7e7e7;\n}",
 				"parentId": null,

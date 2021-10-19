@@ -75,13 +75,6 @@
 				"id": "HB6e3GBt9wtXVJre6xTNg"
 			},
 			{
-				"name": "subTitleStyleBlue",
-				"content": "self {\nfont-weight: 700;\nfont-size: 20px;\ncolor: #2289FF;\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "mOZ75h74eBtZjoj9O2cXb"
-			},
-			{
 				"name": "fontAndColor",
 				"content": "self {\nfont-family: Helvetica, sans-serif;\ncolor:#14395B;\n}",
 				"parentId": null,
@@ -103,37 +96,6 @@
 				"id": "-wZS6uL2_graupRbTIwEk"
 			},
 			{
-				"name": "draft",
-				"content": "self {\n  height : 60px;\n  display : flex;\n  flex-direction : row;\n  align-items : center;\n  justify-content : space-between;\n  border-bottom-width : 2px;\n  border-bottom-color : #3b82f6ff;\n}",
-				"children": {},
-				"parentId": null,
-				"scope": "local",
-				"origin": "Z-MSLvpt5",
-				"id": "B7hIdD7EXjqxUFjiWSDFx"
-			},
-			{
-				"id": "ytmLBS7fmKJyGbTlwkO3N",
-				"name": "subTitleStyleGrey",
-				"content": "self {\ncolor : #838383ff;\n}",
-				"scope": "local",
-				"parentId": null,
-				"children": {}
-			},
-			{
-				"name": "blueText",
-				"content": "self {\nfont-size: 20px;\ncolor: #2289FF;\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "jgbgZZ7ukDHbQdteViCKg"
-			},
-			{
-				"name": "lab",
-				"content": "self {\n\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "iapEG1UAIQA_OUnZ6O6vb"
-			},
-			{
 				"name": "matrixStyle",
 				"content": "self {\n border-width : 1px;\n  border-color : #e7e7e7;\n}",
 				"parentId": null,
@@ -146,6 +108,55 @@
 				"parentId": null,
 				"scope": "local",
 				"id": "4-wHwugH-PB4Q-fNsGSC-"
+			},
+			{
+				"name": "blueSubTitle",
+				"content": "self {\nfont-size : 20px;\ncolor : #2289FF;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "fjxTg6CV5ZDfw8lD05IjY"
+			},
+			{
+				"name": "deleteButton",
+				"content": "self {\n  background-color : #ff2226ff;\n  width : 69px;\n  height : 69px;\n  border-radius : 100px;\n  display : flex;\n  justify-content : center;\n  align-items : center;\n  flex-direction : row;\n}",
+				"children": {},
+				"parentId": null,
+				"scope": "local",
+				"origin": "g0w0QXR0T",
+				"id": "3S1pwEpg_1wVeqvdN7kLQ"
+			},
+			{
+				"id": "YC-G4iarUbSFG7uraFKLm",
+				"name": "courseName",
+				"content": "self {\n    color: #304f6d;\n  font-size : 20px;\n  font-weight: 600 ;\n}",
+				"scope": "local",
+				"parentId": null,
+				"children": {}
+			},
+			{
+				"name": "draft",
+				"content": "self {\n  border-color : #2289FF;\n  border-width : 1px;\n  border-radius : 100px;\n}",
+				"children": {},
+				"parentId": null,
+				"scope": "local",
+				"origin": "ElCVy_I3p",
+				"id": "BkvrbHReyItzBJWSmVzve"
+			},
+			{
+				"id": "n5UGxU4wvhT21_BywrpFb",
+				"name": "attendedCourseName",
+				"content": "self {\n    color: #304f6d;\n  font-size : 16px;\n  font-weight: 500 ;\n  height : 20px;\n}",
+				"scope": "local",
+				"parentId": null,
+				"children": {}
+			},
+			{
+				"id": "E12HkdLMzaeWvYSzntfA3",
+				"name": "studentName",
+				"content": "self {\n    color: #304f6d;\n  font-size : 20px;\n  font-weight: 500 ;\n}",
+				"scope": "local",
+				"parentId": null,
+				"children": {}
 			}
 		]
 	},
@@ -157,7 +168,34 @@
 			"isCanvas": true,
 			"props": {
 				"className": "bg-white min-h-full w-full px-8",
-				"events": [],
+				"events": [
+					{
+						"events": [
+							"onload"
+						],
+						"id": "2cwQmArjiyeaVv6QbnUD3i",
+						"method": "student.attendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
+						}
+					},
+					{
+						"events": [
+							"onload"
+						],
+						"id": "nuSsA8dbciMLrXXx9PEABB",
+						"method": "student.notAttendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "notAttendedCourses"
+						}
+					}
+				],
 				"style": {
 					"width": "100%",
 					"display": "flex",
@@ -214,7 +252,7 @@
 					"matrixStyle"
 				],
 				"style": {
-					"height": "600px",
+					"height": "780px",
 					"marginTop": "10px"
 				},
 				"orientation": "vertical",
@@ -349,7 +387,10 @@
 						]
 					}
 				],
-				"text": "<p>student.fullname</p>"
+				"text": "<p>student.fullname</p>",
+				"classNames": [
+					"studentName"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -426,8 +467,9 @@
 					"display": "flex",
 					"flexDirection": "row",
 					"justifyContent": "flex-start",
-					"marginTop": "20px",
-					"width": "1200px"
+					"marginTop": "30px",
+					"width": "1200px",
+					"alignItems": "start"
 				},
 				"classNames": [
 					"containserSB"
@@ -451,15 +493,19 @@
 			"props": {
 				"events": [],
 				"style": {
-					"width": "60%"
+					"width": "60%",
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "flex-start",
+					"alignItems": "center"
 				}
 			},
 			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
-				"oV8UV0o9A",
-				"zoYitmwhj"
+				"0xaSY2GhB",
+				"UnSk8N4CG"
 			],
 			"linkedNodes": {},
 			"parent": "SvNMw9NDf"
@@ -761,29 +807,6 @@
 			"linkedNodes": {},
 			"parent": "cqxmVzOXs"
 		},
-		"oV8UV0o9A": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"style": {
-					"width": "100%",
-					"display": "flex",
-					"justifyContent": "center",
-					"alignItems": "center"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"hidden": false,
-			"nodes": [
-				"oa4LDpWIrb"
-			],
-			"linkedNodes": {},
-			"parent": "VLthta2Vt"
-		},
 		"oa4LDpWIrb": {
 			"type": {
 				"resolvedName": "Text"
@@ -809,7 +832,9 @@
 					}
 				],
 				"text": "<p>Course registration</p>",
-				"style": {},
+				"style": {
+					"textAlign": "center"
+				},
 				"classNames": [
 					"title"
 				]
@@ -819,27 +844,7 @@
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {},
-			"parent": "oV8UV0o9A"
-		},
-		"zoYitmwhj": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"style": {
-					"marginTop": "120px"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {},
-			"hidden": false,
-			"nodes": [
-				"UnSk8N4CG"
-			],
-			"linkedNodes": {},
-			"parent": "VLthta2Vt"
+			"parent": "0xaSY2GhB"
 		},
 		"UnSk8N4CG": {
 			"type": {
@@ -851,6 +856,9 @@
 				"rows": [
 					{
 						"id": "9baDygg7pLjhdzAVeqgWM5"
+					},
+					{
+						"id": "ns4qu3Q4ud8qLo5S5CmqEH"
 					}
 				],
 				"columns": [
@@ -864,7 +872,9 @@
 				"spacingX": "2",
 				"spacingY": "2",
 				"events": [],
-				"style": {}
+				"style": {
+					"marginTop": "120px"
+				}
 			},
 			"displayName": "Columns",
 			"custom": {},
@@ -872,9 +882,11 @@
 			"nodes": [],
 			"linkedNodes": {
 				"pqECpoLFj9EsYTK9VPwdg69baDygg7pLjhdzAVeqgWM5": "ClpXodmyE",
-				"um55xwSQrPAc1d9rxNmJ2T9baDygg7pLjhdzAVeqgWM5": "W243CYcsrV"
+				"um55xwSQrPAc1d9rxNmJ2T9baDygg7pLjhdzAVeqgWM5": "W243CYcsrV",
+				"pqECpoLFj9EsYTK9VPwdg6ns4qu3Q4ud8qLo5S5CmqEH": "peW3G3bEI",
+				"um55xwSQrPAc1d9rxNmJ2Tns4qu3Q4ud8qLo5S5CmqEH": "8X0ZxJt0CV"
 			},
-			"parent": "zoYitmwhj"
+			"parent": "VLthta2Vt"
 		},
 		"ClpXodmyE": {
 			"type": {
@@ -909,7 +921,12 @@
 			"props": {
 				"hidden": false,
 				"events": [],
-				"style": {}
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "center",
+					"alignItems": "start"
+				}
 			},
 			"displayName": "Stylebox",
 			"custom": {},
@@ -936,7 +953,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Available courses",
+								"text": "Click to attend this course",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -945,8 +962,11 @@
 						]
 					}
 				],
-				"text": "<p>Available courses</p>",
-				"style": {}
+				"text": "<p>Click to attend this course</p>",
+				"style": {},
+				"classNames": [
+					"blueSubTitle"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -961,17 +981,51 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"classNames": [],
+				"classNames": [
+					"matrixStyle"
+				],
 				"style": {
-					"height": "500px",
-					"borderColor": "#3b82f6ff",
-					"width": "300px",
-					"borderWidth": "2px"
+					"height": "600px",
+					"width": "300px"
 				},
 				"orientation": "vertical",
 				"datasource": "notAttendedCourses",
 				"currentElement": "notAttendedCourse",
-				"events": []
+				"events": [
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "5r1wfCRZwtmt1Xo7Janmb1",
+						"method": "student.attendsToCourse",
+						"params": [
+							{
+								"name": "$course",
+								"type": "cs.CoursesEntity",
+								"datasource": "notAttendedCourse",
+								"id": "1mjjCWgcn5b3CCF8sR2bZi"
+							}
+						],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
+						}
+					},
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "9cWJZcj3fA8Buyx6WvtMmy",
+						"method": "student.notAttendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "notAttendedCourses"
+						}
+					}
+				]
 			},
 			"displayName": "Matrix",
 			"custom": {},
@@ -992,7 +1046,10 @@
 					"height": "50px"
 				},
 				"hidden": false,
-				"events": []
+				"events": [],
+				"classNames": [
+					"matrixSB"
+				]
 			},
 			"displayName": "Stylebox",
 			"custom": {},
@@ -1029,7 +1086,10 @@
 					}
 				],
 				"text": "<p>notAttendedCourse.name</p>",
-				"style": {}
+				"style": {},
+				"classNames": [
+					"courseName"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -1046,24 +1106,34 @@
 			"props": {
 				"deletable": true,
 				"moveable": true,
-				"datasource": "",
+				"datasource": "attendedCourses.length",
 				"events": [],
 				"doc": [
 					{
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Attended courses",
+								"text": "attendedCourses.length",
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							},
+							{
 								"bold": false,
 								"italic": false,
 								"underlined": false,
-								"strikethrough": false
+								"strikethrough": false,
+								"text": " attended courses"
 							}
 						]
 					}
 				],
-				"text": "<p>Attended courses</p>",
-				"style": {}
+				"text": "<p>attendedCourses.length attended courses</p>",
+				"style": {
+					"fontSize": "20px"
+				},
+				"classNames": []
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -1078,12 +1148,12 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"classNames": [],
+				"classNames": [
+					"matrixStyle"
+				],
 				"style": {
-					"height": "500px",
-					"borderColor": "#3b82f6ff",
-					"width": "300px",
-					"borderWidth": "2px"
+					"height": "600px",
+					"width": "300px"
 				},
 				"orientation": "vertical",
 				"datasource": "attendedCourses",
@@ -1106,11 +1176,16 @@
 			"isCanvas": true,
 			"props": {
 				"style": {
-					"height": "50px"
+					"height": "30px",
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center",
+					"justifyContent": "flex-start"
 				},
 				"hidden": false,
 				"events": [],
-				"datasource": "attendedCourses"
+				"datasource": "attendedCourses",
+				"classNames": []
 			},
 			"displayName": "Stylebox",
 			"custom": {},
@@ -1147,7 +1222,10 @@
 					}
 				],
 				"text": "<p>currentAttendedCourse.name</p>",
-				"style": {}
+				"style": {},
+				"classNames": [
+					"attendedCourseName"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -1155,6 +1233,153 @@
 			"nodes": [],
 			"linkedNodes": {},
 			"parent": "oS7K3ePO8l"
+		},
+		"0xaSY2GhB": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"oa4LDpWIrb"
+			],
+			"linkedNodes": {},
+			"parent": "VLthta2Vt"
+		},
+		"OywawrNoK": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"icon": "fa-trash",
+				"events": [],
+				"style": {
+					"color": "#ffffffff",
+					"fontSize": "36px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "g0w0QXR0T"
+		},
+		"g0w0QXR0T": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [
+					{
+						"events": [
+							"onclick"
+						],
+						"id": "3jNcPsnRAwvfTSmzQW7nSt",
+						"method": "student.cancelAllAttendance",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
+						}
+					},
+					{
+						"events": [
+							"onclick"
+						],
+						"id": "eKr9xTDhXyhyb9kgNUYCQT",
+						"method": "student.notAttendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "notAttendedCourses"
+						}
+					}
+				],
+				"style": {
+					"width": "69px",
+					"height": "69px"
+				},
+				"classNames": [
+					"deleteButton"
+				]
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"OywawrNoK"
+			],
+			"linkedNodes": {},
+			"parent": "uXVJKLV0K"
+		},
+		"uXVJKLV0K": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "row",
+					"justifyContent": "flex-end"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"g0w0QXR0T"
+			],
+			"linkedNodes": {},
+			"parent": "8X0ZxJt0CV"
+		},
+		"peW3G3bEI": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"hidden": false,
+				"events": [],
+				"style": {},
+				"classNames": []
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "UnSk8N4CG"
+		},
+		"8X0ZxJt0CV": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"hidden": false
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"uXVJKLV0K"
+			],
+			"linkedNodes": {},
+			"parent": "UnSk8N4CG"
 		}
 	}
 }
