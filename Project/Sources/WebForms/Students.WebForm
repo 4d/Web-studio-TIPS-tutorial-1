@@ -153,6 +153,13 @@
 				"parentId": null,
 				"scope": "local",
 				"id": "4-wHwugH-PB4Q-fNsGSC-"
+			},
+			{
+				"name": "studentName",
+				"content": "self {\n    color: #304f6d;\n  font-size : 20px;\n  font-weight: 500 ;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "vxLKq-dvT4OsuSmfHCqRn"
 			}
 		]
 	},
@@ -343,7 +350,10 @@
 						]
 					}
 				],
-				"text": "<p>student.fullname</p>"
+				"text": "<p>student.fullname</p>",
+				"classNames": [
+					"studentName"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},
@@ -631,8 +641,9 @@
 				"style": {
 					"width": "100%",
 					"display": "flex",
-					"justifyContent": "flex-start",
-					"alignItems": "center"
+					"justifyContent": "center",
+					"alignItems": "center",
+					"flexDirection": "row"
 				}
 			},
 			"displayName": "Stylebox",
@@ -1386,9 +1397,9 @@
 			"props": {
 				"events": [],
 				"style": {
-					"height": "400px",
 					"width": "300px",
-					"marginTop": "10px"
+					"height": "400px",
+					"color": "#304f6d"
 				},
 				"datasource": "attendedCourses",
 				"currentElement": "currentCourse",
@@ -1532,7 +1543,8 @@
 				"style": {
 					"width": "300px",
 					"marginTop": "10px",
-					"height": "400px"
+					"height": "400px",
+					"color": "#304f6d"
 				},
 				"datasource": "attendees",
 				"currentElement": "attendee",

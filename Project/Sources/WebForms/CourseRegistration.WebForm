@@ -1133,7 +1133,9 @@
 				"style": {
 					"fontSize": "20px"
 				},
-				"classNames": []
+				"classNames": [
+					"blueSubTitle"
+				]
 			},
 			"displayName": "Text",
 			"custom": {},

@@ -12,7 +12,15 @@
 				"events": []
 			}
 		],
-		"styles": []
+		"styles": [
+			{
+				"name": "radioStyle",
+				"content": "self \n{\n    color: #2289FF;\n    font-size : 20px;\n}\nself > .selected\n{\n    color: #2289FF;\n    font-weight: 700;\n    border-color: transparent;\n    font-size : 22px;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "zOs-fKoBMrpzNb8cy4ew9"
+			}
+		]
 	},
 	"components": {
 		"ROOT": {
@@ -22,7 +30,21 @@
 			"isCanvas": true,
 			"props": {
 				"className": "bg-white min-h-full w-full px-8",
-				"events": [],
+				"events": [
+					{
+						"events": [
+							"onload"
+						],
+						"id": "6XwRFkTNqAQcREN4vckxrg",
+						"method": "ds.Utilities.initSteps",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "Text",
+							"datasource": "choice"
+						}
+					}
+				],
 				"style": {}
 			},
 			"displayName": "Webform",
@@ -41,8 +63,10 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"classNames": [],
-				"defaultValue": "CourseRegistration",
+				"classNames": [
+					"radioStyle"
+				],
+				"defaultValue": "Students",
 				"mode": "single",
 				"options": [
 					{
@@ -59,7 +83,9 @@
 				"events": [],
 				"datasource": "choice",
 				"style": {
-					"marginTop": "20px"
+					"marginTop": "20px",
+					"fontSize": "18px",
+					"fontFamily": "Helvetica"
 				}
 			},
 			"displayName": "Radio",
