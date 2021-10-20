@@ -56,42 +56,6 @@
 			"linkedNodes": {},
 			"parent": ""
 		},
-		"r0L7azalG": {
-			"type": {
-				"resolvedName": "DataTable"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"style": {},
-				"datasource": "students",
-				"currentElement": "student",
-				"columns": [
-					{
-						"title": "Firstname",
-						"source": "firstname",
-						"format": "",
-						"width": 150,
-						"sorting": false,
-						"id": "gcpVicZRxNEVczP6kR2pNU"
-					},
-					{
-						"title": "Lastname",
-						"source": "lastname",
-						"format": "",
-						"width": 150,
-						"sorting": false,
-						"id": "4GBUgY6M7enJGWomN6Jyko"
-					}
-				]
-			},
-			"displayName": "Datatable",
-			"custom": {},
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {},
-			"parent": "A26vKHIe1"
-		},
 		"FyzpQlt-e": {
 			"type": {
 				"resolvedName": "Text"
@@ -196,15 +160,17 @@
 					"display": "flex",
 					"flexDirection": "column",
 					"alignItems": "start",
-					"justifyContent": "center"
-				}
+					"justifyContent": "center",
+					"marginTop": "20px"
+				},
+				"datasource": "student.lastname"
 			},
 			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
 				"X0h1gZXUQ",
-				"r0L7azalG"
+				"i_GtCaLpD"
 			],
 			"linkedNodes": {},
 			"parent": "ROOT"
@@ -216,7 +182,11 @@
 			"isCanvas": false,
 			"props": {
 				"placeholder": "placeholder",
-				"label": "label"
+				"label": "label",
+				"events": [],
+				"style": {
+					"marginBottom": "20px"
+				}
 			},
 			"displayName": "Text input",
 			"custom": {},
@@ -291,6 +261,136 @@
 			"nodes": [],
 			"linkedNodes": {},
 			"parent": "X0h1gZXUQ"
+		},
+		"i_GtCaLpD": {
+			"type": {
+				"resolvedName": "Matrix"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"style": {
+					"height": "360px",
+					"borderColor": "#e7e7e7",
+					"width": "250px",
+					"borderWidth": "1px"
+				},
+				"orientation": "vertical",
+				"events": [],
+				"datasource": "students",
+				"currentElement": "student"
+			},
+			"displayName": "Matrix",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"container": "NFDZJ6zPm"
+			},
+			"parent": "A26vKHIe1"
+		},
+		"NFDZJ6zPm": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"style": {
+					"height": "60px",
+					"borderBottomColor": "#e7e7e7",
+					"borderBottomWidth": "1px",
+					"display": "flex",
+					"flexDirection": "row",
+					"alignItems": "center"
+				},
+				"events": [],
+				"hidden": false
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"CFcsVd5qf",
+				"OzUak_1E6"
+			],
+			"linkedNodes": {},
+			"parent": "i_GtCaLpD"
+		},
+		"CFcsVd5qf": {
+			"type": {
+				"resolvedName": "Image"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"style": {
+					"height": "50px",
+					"width": "50px",
+					"minWidth": "50px",
+					"minHeight": "50px",
+					"borderRadius": "50%"
+				},
+				"events": [],
+				"datasource": "student.photo"
+			},
+			"displayName": "Image",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "NFDZJ6zPm"
+		},
+		"OzUak_1E6": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "student.firstname,student.lastname",
+				"events": [],
+				"style": {
+					"marginLeft": "30px"
+				},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "student.firstname",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": " "
+							},
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "student.lastname",
+								"isDataSource": true
+							}
+						]
+					}
+				],
+				"text": "<p>student.firstname student.lastname</p>"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "NFDZJ6zPm"
 		}
 	}
 }
