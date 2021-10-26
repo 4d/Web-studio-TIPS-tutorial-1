@@ -1,0 +1,62 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"CPvU-R2Ip"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"CPvU-R2Ip": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "",
+				"events": [],
+				"style": {},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Courses page",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Courses page</p>"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		}
+	}
+}

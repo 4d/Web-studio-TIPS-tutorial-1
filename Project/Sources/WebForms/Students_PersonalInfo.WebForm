@@ -78,6 +78,33 @@
 				"type": "entity",
 				"initialValue": "first",
 				"events": []
+			},
+			{
+				"id": "hobbies",
+				"type": "array",
+				"from": "",
+				"dataclass": "",
+				"initialValue": [],
+				"dataType": "string",
+				"events": []
+			},
+			{
+				"id": "local1hoby",
+				"type": "object",
+				"from": "",
+				"dataclass": "",
+				"initialValue": {},
+				"dataType": "string",
+				"events": []
+			},
+			{
+				"id": "hobby",
+				"type": "object",
+				"from": "",
+				"dataclass": "",
+				"initialValue": {},
+				"dataType": "string",
+				"events": []
 			}
 		],
 		"styles": [
@@ -202,7 +229,7 @@
 				"events": [],
 				"style": {
 					"width": "25%",
-					"height": "100%",
+					"height": "90%",
 					"display": "flex",
 					"flexDirection": "column",
 					"justifyContent": "space-between"
@@ -228,13 +255,27 @@
 					"matrixStyle"
 				],
 				"style": {
-					"height": "720px",
+					"height": "600px",
 					"marginTop": "10px"
 				},
 				"orientation": "vertical",
 				"datasource": "students",
 				"currentElement": "student",
-				"events": []
+				"events": [
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "arUGywW8h9igDtrsxHRnBc",
+						"method": "student.hobbiesAsColl",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "Collection",
+							"datasource": "hobbies"
+						}
+					}
+				]
 			},
 			"displayName": "Matrix",
 			"custom": {},
@@ -441,10 +482,7 @@
 			"props": {
 				"events": [],
 				"style": {
-					"width": "60%",
-					"display": "flex",
-					"flexDirection": "column",
-					"justifyContent": "flex-start"
+					"width": "60%"
 				}
 			},
 			"displayName": "Stylebox",
@@ -789,8 +827,7 @@
 					"height": "auto",
 					"width": "150px"
 				},
-				"datasource": "student.photo",
-				"events": []
+				"datasource": "student.photo"
 			},
 			"displayName": "Image",
 			"custom": {},
@@ -898,8 +935,8 @@
 						"height": "auto"
 					},
 					{
-						"height": "auto",
-						"id": "5R5ADRAFgNWSvgQ6gAu4ig"
+						"id": "5R5ADRAFgNWSvgQ6gAu4ig",
+						"height": "auto"
 					}
 				],
 				"columns": [
@@ -942,15 +979,22 @@
 						"id": "j5UC6qNcMWhCaf9zaUyp3Z"
 					},
 					{
-						"colSpan": 2,
+						"colSpan": 1,
 						"colStart": 1,
 						"rowSpan": 1,
 						"rowStart": 3,
 						"id": "4bm9tAQygwtP8tMpjtJTJq"
+					},
+					{
+						"colSpan": 1,
+						"colStart": 2,
+						"rowSpan": 1,
+						"rowStart": 3,
+						"id": "jLpBqUdJMtZxsXUSsRL1ta"
 					}
 				],
-				"rowGap": "1px",
-				"colGap": "1px",
+				"rowGap": "10px",
+				"colGap": "10px",
 				"events": [],
 				"style": {}
 			},
@@ -1372,46 +1416,6 @@
 			"linkedNodes": {},
 			"parent": "AC2EIpuWS"
 		},
-		"FExMUH8s-": {
-			"type": {
-				"resolvedName": "DataTable"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"style": {
-					"width": "300px",
-					"height": "500px",
-					"color": "#304f6d"
-				},
-				"datasource": "student.attendedCourses",
-				"currentElement": "currentCourse",
-				"columns": [
-					{
-						"title": "Name",
-						"source": "name",
-						"format": "",
-						"width": 150,
-						"sorting": false,
-						"id": "9u4FxXfrpE6kEg8X2jFw2V"
-					},
-					{
-						"title": "School",
-						"source": "school.name",
-						"format": "",
-						"width": 150,
-						"sorting": false,
-						"id": "jUUiXbB8MauyGaPyekSeKJ"
-					}
-				]
-			},
-			"displayName": "Datatable",
-			"custom": {},
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {},
-			"parent": "buAP14Eiw"
-		},
 		"pdR9p1ZwM": {
 			"type": {
 				"resolvedName": "Text"
@@ -1420,14 +1424,51 @@
 			"props": {
 				"deletable": true,
 				"moveable": true,
-				"datasource": "attendedCourses.length",
+				"datasource": "",
 				"events": [],
 				"doc": [
 					{
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Attended courses (",
+								"text": "Hobbies",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Hobbies</p>",
+				"style": {},
+				"classNames": [
+					"blueText"
+				]
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "T8HsKdaRA"
+		},
+		"qTMIp4XqGr": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"datasource": "currentCourse.numberOfAttendees",
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Course attendees (",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1438,7 +1479,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "attendedCourses.length",
+								"text": "currentCourse.numberOfAttendees",
 								"isDataSource": true
 							},
 							{
@@ -1451,7 +1492,7 @@
 						]
 					}
 				],
-				"text": "<p>Attended courses (attendedCourses.length)</p>",
+				"text": "<p>Course attendees (currentCourse.numberOfAttendees)</p>",
 				"style": {},
 				"classNames": [
 					"blueText"
@@ -1462,7 +1503,48 @@
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {},
-			"parent": "buAP14Eiw"
+			"parent": "sRpkGIKKD"
+		},
+		"ZJ5Sr-EDI": {
+			"type": {
+				"resolvedName": "DataTable"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "300px",
+					"marginTop": "10px",
+					"height": "400px",
+					"color": "#304f6d"
+				},
+				"datasource": "attendees",
+				"currentElement": "attendee",
+				"columns": [
+					{
+						"title": "Firstname",
+						"source": "firstname",
+						"format": "",
+						"width": 150,
+						"sorting": false,
+						"id": "gdm6QB641vgXHmTQeaxwZb"
+					},
+					{
+						"title": "Lastname",
+						"source": "lastname",
+						"format": "",
+						"width": 150,
+						"sorting": false,
+						"id": "j8ep97d5H6iSr24AbcU9Zq"
+					}
+				]
+			},
+			"displayName": "Datatable",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "sRpkGIKKD"
 		},
 		"T8HsKdaRA": {
 			"type": {
@@ -1472,20 +1554,14 @@
 			"props": {
 				"className": "h-full",
 				"events": [],
-				"hidden": false,
-				"style": {
-					"display": "flex",
-					"flexDirection": "row",
-					"justifyContent": "center",
-					"alignItems": "start"
-				}
+				"hidden": false
 			},
 			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
-				"Fa-xCHcMI",
-				"buAP14Eiw"
+				"pdR9p1ZwM",
+				"7FhAhZiG4"
 			],
 			"linkedNodes": {},
 			"parent": "YvL1YKVj8"
@@ -1504,35 +1580,58 @@
 			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
-			"nodes": [],
+			"nodes": [
+				"qTMIp4XqGr",
+				"ZJ5Sr-EDI"
+			],
 			"linkedNodes": {},
 			"parent": "YvL1YKVj8"
 		},
-		"buAP14Eiw": {
+		"7FhAhZiG4": {
+			"type": {
+				"resolvedName": "Matrix"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"style": {
+					"height": "300px"
+				},
+				"orientation": "vertical",
+				"events": [],
+				"datasource": "hobbies",
+				"currentElement": "hobby"
+			},
+			"displayName": "Matrix",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"container": "vblzuxMSz"
+			},
+			"parent": "T8HsKdaRA"
+		},
+		"vblzuxMSz": {
 			"type": {
 				"resolvedName": "StyleBox"
 			},
 			"isCanvas": true,
 			"props": {
-				"events": [],
 				"style": {
-					"display": "flex",
-					"flexDirection": "column",
-					"justifyContent": "center",
-					"width": "50%"
-				}
+					"height": "40px"
+				},
+				"hidden": false
 			},
 			"displayName": "Stylebox",
 			"custom": {},
 			"hidden": false,
 			"nodes": [
-				"pdR9p1ZwM",
-				"FExMUH8s-"
+				"lc_GGIFJp"
 			],
 			"linkedNodes": {},
-			"parent": "T8HsKdaRA"
+			"parent": "7FhAhZiG4"
 		},
-		"Fa-xCHcMI": {
+		"lc_GGIFJp": {
 			"type": {
 				"resolvedName": "Text"
 			},
@@ -1540,33 +1639,32 @@
 			"props": {
 				"deletable": true,
 				"moveable": true,
-				"datasource": "",
+				"datasource": "hobby.key",
 				"events": [],
 				"doc": [
 					{
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Blocking bugs: 419 - 551",
-								"bold": true,
+								"text": "hobby.key",
+								"bold": false,
 								"italic": false,
 								"underlined": false,
-								"strikethrough": false
+								"strikethrough": false,
+								"isDataSource": true
 							}
 						]
 					}
 				],
-				"text": "<p><b>Blocking bugs: 419 - 551</b></p>",
-				"style": {
-					"color": "#e73351ff"
-				}
+				"text": "<p>hobby.key</p>",
+				"style": {}
 			},
 			"displayName": "Text",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {},
-			"parent": "T8HsKdaRA"
+			"parent": "vblzuxMSz"
 		}
 	}
 }

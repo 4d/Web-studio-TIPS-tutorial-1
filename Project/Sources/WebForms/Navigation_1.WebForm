@@ -1,0 +1,90 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [
+			{
+				"id": "target",
+				"type": "scalar",
+				"from": "",
+				"dataclass": "",
+				"initialValue": "",
+				"dataType": "string",
+				"events": []
+			}
+		],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"OasAvKJBa",
+				"fUOVGO5FW"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"OasAvKJBa": {
+			"type": {
+				"resolvedName": "Radio"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"defaultValue": "option2",
+				"mode": "single",
+				"options": [
+					{
+						"label": "The courses",
+						"value": "Courses",
+						"id": "vRgd4frKdMT6zmFSVRicYJ"
+					},
+					{
+						"label": "The schools",
+						"value": "Schools",
+						"id": "cKYLwcGkXoaQaAiGWYfg4N"
+					}
+				],
+				"events": [],
+				"datasource": "target",
+				"style": {}
+			},
+			"displayName": "Radio",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"fUOVGO5FW": {
+			"type": {
+				"resolvedName": "WebformLoader"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"datasource": "target",
+				"style": {
+					"marginTop": "20px"
+				}
+			},
+			"displayName": "Webform loader",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		}
+	}
+}
