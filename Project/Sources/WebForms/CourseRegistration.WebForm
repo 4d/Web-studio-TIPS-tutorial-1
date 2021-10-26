@@ -271,19 +271,6 @@
 							"type": "cs.CoursesSelection",
 							"datasource": "notAttendedCourses"
 						}
-					},
-					{
-						"events": [
-							"onselect"
-						],
-						"id": "5HAiPwu7rQB4TFWPottm1f",
-						"method": "student.attendedCourses",
-						"params": [],
-						"returns": {
-							"name": "$result",
-							"type": "cs.CoursesSelection",
-							"datasource": "attendedCourses"
-						}
 					}
 				]
 			},
@@ -1158,7 +1145,7 @@
 					"width": "300px"
 				},
 				"orientation": "vertical",
-				"datasource": "attendedCourses",
+				"datasource": "student.attendedCourses",
 				"currentElement": "currentAttendedCourse",
 				"events": []
 			},
