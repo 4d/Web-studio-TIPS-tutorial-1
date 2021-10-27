@@ -101,11 +101,12 @@
 		<field name="ID" uuid="C8C03704AAA24567AF8F3EDFE99446F4" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="courseID" uuid="0A19B2F95F194512AA5D6F4EC3479A44" type="4" never_null="true" id="2"/>
 		<field name="studentID" uuid="D5144D85733140CDB5249B999E507A33" type="4" never_null="true" id="3"/>
+		<field name="sequenceNumber" uuid="187E43E3D54C47C68E48BC246AB7D338" type="3" never_null="true" id="4"/>
 		<primary_key field_name="ID" field_uuid="C8C03704AAA24567AF8F3EDFE99446F4"/>
 		<table_extra>
-			<editor_table_info displayable_fields_count="3">
+			<editor_table_info displayable_fields_count="5">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="0" top="104.94921875" width="134.49609375" height="121.625"/>
+				<coordinates left="0" top="104.94921875" width="161.6015625" height="158.2109375"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

@@ -30,53 +30,13 @@
 				"events": []
 			},
 			{
-				"id": "attendedCourses",
-				"from": "",
-				"dataclass": "Courses",
-				"dataType": "",
-				"type": "entitysel",
-				"initialValue": "",
-				"events": []
-			},
-			{
-				"id": "attendees",
-				"from": "",
-				"dataclass": "Students",
-				"dataType": "",
-				"type": "entitysel",
-				"initialValue": "",
-				"events": []
-			},
-			{
 				"id": "currentCourse",
-				"from": "attendedCourses",
+				"from": "",
 				"dataclass": "Courses",
 				"dataType": "",
 				"type": "entity",
-				"initialValue": "first",
-				"events": [
-					{
-						"events": [
-							"onChange"
-						],
-						"id": "r6PgGrXQvKD3LkmguGCmsz",
-						"method": "currentCourse.attendees",
-						"params": [],
-						"returns": {
-							"name": "$result",
-							"type": "cs.StudentsSelection",
-							"datasource": "attendees"
-						}
-					}
-				]
-			},
-			{
-				"id": "attendee",
-				"from": "attendees",
-				"dataclass": "Students",
-				"dataType": "",
-				"type": "entity",
-				"initialValue": "first",
+				"initialValue": "",
+				"depth": 0,
 				"events": []
 			}
 		],
@@ -1384,7 +1344,7 @@
 					"height": "500px",
 					"color": "#304f6d"
 				},
-				"datasource": "student.attendedCourses",
+				"datasource": "student.courses",
 				"currentElement": "currentCourse",
 				"columns": [
 					{

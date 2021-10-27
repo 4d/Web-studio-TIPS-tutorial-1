@@ -1,52 +1,56 @@
 Class extends Entity
 
 
+exposed Alias courses attends.course
+
 local exposed Function age
 	var $0; $result : Integer
 	
-	If (This.birthDate#!00-00-00!)
-		$result:=Year of(Current date)-Year of(This.birthDate)
+	If (This:C1470.birthDate#!00-00-00!)
+		$result:=Year of:C25(Current date:C33)-Year of:C25(This:C1470.birthDate)
 	Else 
-		$result:=Null
+		$result:=Null:C1517
 	End if 
 	$0:=$result
 	
+exposed Function attendedCourses()->$result : cs:C1710.CoursesSelection
+	$attends:=This:C1470.attends.orderBy("sequenceNumber")
 	
-//exposed Function attendedCourses()->$result : cs.CoursesSelection
-//	$result:=This.attends.course
+	$result:=ds:C1482.Courses.newSelection(dk keep ordered:K85:11)
 	
-exposed Alias attendedCourses attends.course
+	For each ($a; $attends)
+		$result.add($a.course)
+	End for each 
 	
-exposed Function notAttendedCourses()->$result : cs.CoursesSelection
-	
-	$studentCourses:=This.attends.course
-	$allCourses:=ds.Courses.all()
+exposed Function notAttendedCourses()->$result : cs:C1710.CoursesSelection
+	$studentCourses:=This:C1470.attends.course
+	$allCourses:=ds:C1482.Courses.all()
 	$result:=$allCourses.minus($studentCourses)
 	
 exposed Function attendsTo
-	var $0 : cs.StudentsEntity
-	var $1; $courses : cs.CoursesSelection
-	var $course : cs.CoursesEntity
-	var $attending : cs.AttendingEntity
+	var $0 : cs:C1710.StudentsEntity
+	var $1; $courses : cs:C1710.CoursesSelection
+	var $course : cs:C1710.CoursesEntity
+	var $attending : cs:C1710.AttendingEntity
 	var $status : Object
 	
 	$courses:=$1
 	
 	For each ($course; $courses)
-		$attending:=ds.Attending.new()
+		$attending:=ds:C1482.Attending.new()
 		$attending.course:=$course
-		$attending.student:=This
+		$attending.student:=This:C1470
 		$status:=$attending.save()
 	End for each 
-	This.reload()
-	$0:=This
+	This:C1470.reload()
+	$0:=This:C1470
 	
 	
 exposed Function cancelAtttendance
-	var $1; $courses : cs.CoursesSelection
-	var $attending; $notDropped : cs.AttendingSelection
+	var $1; $courses : cs:C1710.CoursesSelection
+	var $attending; $notDropped : cs:C1710.AttendingSelection
 	var $status : Object
-	var $0 : cs.StudentsEntity
+	var $0 : cs:C1710.StudentsEntity
 	var $queryString; $primaryKey : Text
 	
 	$courses:=$1
@@ -54,91 +58,104 @@ exposed Function cancelAtttendance
 	$primaryKey:=$courses.getDataClass().getInfo().primaryKey
 	
 	$queryString:="course."+$primaryKey+" in :1"
-	$attending:=This.attends.query($queryString; $courses.getPrimaryKeys())
+	$attending:=This:C1470.attends.query($queryString; $courses.getPrimaryKeys())
 	
 	$notDropped:=$attending.drop()
 	
-	This.reload()
-	$0:=This
+	This:C1470.reload()
+	$0:=This:C1470
 	
 	
 exposed Function update
 	var $status; $0 : Object
 	
-	$status:=checkStudent(This)
+	$status:=checkStudent(This:C1470)
 	
 	If ($status.success)
-		$status:=This.save()
+		$status:=This:C1470.save()
 	End if 
 	
 	$0:=$status
 	
 	
 exposed Function quitSchool
-	var $1; $school : cs.SchoolsSelection
-	var $schoolsAttends; $studentAttends; $intersect; $notDropped : cs.AttendingSelection
-	var $0 : cs.CoursesSelection
+	var $1; $school : cs:C1710.SchoolsSelection
+	var $schoolsAttends; $studentAttends; $intersect; $notDropped : cs:C1710.AttendingSelection
+	var $0 : cs:C1710.CoursesSelection
 	
 	$school:=$1
 	
 	$schoolsAttends:=$school.courses.attendedBy
-	$studentAttends:=This.attends
+	$studentAttends:=This:C1470.attends
 	$intersect:=$schoolsAttends.and($studentAttends)
 	
-	If ($intersect#Null)
+	If ($intersect#Null:C1517)
 		$notDropped:=$intersect.drop()
 	End if 
 	
-	$0:=This.attendedCourses()
+	$0:=This:C1470.attendedCourses()
 	
 exposed Function get fullname()->$result : Text
-	$result:=This.firstname+" "+This.lastname
+	$result:=This:C1470.firstname+" "+This:C1470.lastname
 	
 exposed Function get drivingLicenseAsString()->$result : Text
-	$result:=Choose(This.hasDrivingLicence=True; "Yes", ; "No")
+	$result:=Choose:C955(This:C1470.hasDrivingLicence=True:C214; "Yes", ; "No")
 	
 	
-exposed Function attendsToCourse($course : cs.CoursesEntity)->$result : cs.CoursesSelection
+exposed Function attendsToCourse($course : cs:C1710.CoursesEntity)->$result : cs:C1710.CoursesSelection
 	
-	var $currentCourses; $ordered; $attendedCourses : cs.CoursesSelection
-	var $aCourse : cs.CoursesEntity
+	var $currentCourses; $ordered; $attendedCourses : cs:C1710.CoursesSelection
+	var $aCourse : cs:C1710.CoursesEntity
 	
-	$currentCourses:=This.attendedCourses()
+	$seqNumber:=This:C1470.attends.max("sequenceNumber")+1
 	
-	$result:=Null
-	
-	$ordered:=ds.Courses.newSelection(dk keep ordered)
-	For each ($aCourse; $currentCourses)
-		$ordered.add($aCourse)
-	End for each 
-	$ordered.add($course)
-	
-	$attending:=ds.Attending.new()
+	$attending:=ds:C1482.Attending.new()
 	$attending.course:=$course
-	$attending.student:=This
+	$attending.student:=This:C1470
+	$attending.sequenceNumber:=$seqNumber
 	$status:=$attending.save()
 	
-	This.reload()
-	$attendedCourses:=This.attendedCourses()
+	This:C1470.reload()
 	
-	If ($attendedCourses.length=$ordered.length)
-		$result:=$ordered
-	End if 
+	$result:=This:C1470.attendedCourses()
 	
 	
-exposed Function cancelAllAttendance()->$result : cs.CoursesSelection
+	//$currentCourses:=This.attendedCourses
 	
-	var notDropped : cs.AttendingSelection
+	//$result:=Null
 	
-	$notDropped:=This.attends.drop()
+	//$ordered:=ds.Courses.newSelection(dk keep ordered)
+	//For each ($aCourse; $currentCourses)
+	//$ordered.add($aCourse)
+	//End for each 
+	//$ordered.add($course)
 	
-	$result:=This.attendedCourses()
+	//$attending:=ds.Attending.new()
+	//$attending.course:=$course
+	//$attending.student:=This
+	//$status:=$attending.save()
+	
+	//This.reload()
+	//$attendedCourses:=This.attendedCourses
+	
+	//If ($attendedCourses.length=$ordered.length)
+	//$result:=$ordered
+	//End if 
+	
+	
+exposed Function cancelAllAttendance()->$result : cs:C1710.CoursesSelection
+	
+	var notDropped : cs:C1710.AttendingSelection
+	
+	$notDropped:=This:C1470.attends.drop()
+	
+	$result:=This:C1470.attendedCourses()
 	
 	
 exposed Function hobbiesAsColl()->$result : Collection
 	
-	If (This.hobbies#Null)
-		$result:=OB Entries(This.hobbies)
+	If (This:C1470.hobbies#Null:C1517)
+		$result:=OB Entries:C1720(This:C1470.hobbies)
 	Else 
-		$result:=New collection()
+		$result:=New collection:C1472()
 	End if 

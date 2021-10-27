@@ -94,8 +94,9 @@ End for
 For each ($student; ds:C1482.Students.all())
 	
 	$randomCourse:=(Random:C100%16)+1
-	
 	$availableCourses:=ds:C1482.Courses.all()
+	
+	$seqNumber:=1
 	
 	For ($i; 1; $randomCourse)
 		$lengthMinus2:=$availableCourses.length-2
@@ -104,6 +105,8 @@ For each ($student; ds:C1482.Students.all())
 		$attending:=ds:C1482.Attending.new()
 		$attending.student:=$student
 		$attending.course:=$course
+		$attending.sequenceNumber:=$seqNumber
+		$seqNumber:=$seqNumber+1
 		$status:=$attending.save()
 		$availableCourses:=$availableCourses.minus($course)
 	End for 

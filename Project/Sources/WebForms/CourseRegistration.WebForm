@@ -54,15 +54,18 @@
 				"dataType": "",
 				"type": "entitysel",
 				"initialValue": "all",
+				"depth": 0,
+				"pageSize": 100,
 				"events": []
 			},
 			{
-				"id": "currentAttendedCourse",
+				"id": "attendedCourse",
 				"from": "attendedCourses",
 				"dataclass": "Courses",
 				"dataType": "",
 				"type": "entity",
 				"initialValue": "first",
+				"depth": 0,
 				"events": []
 			}
 		],
@@ -173,19 +176,6 @@
 						"events": [
 							"onload"
 						],
-						"id": "2cwQmArjiyeaVv6QbnUD3i",
-						"method": "student.attendedCourses",
-						"params": [],
-						"returns": {
-							"name": "$result",
-							"type": "cs.CoursesSelection",
-							"datasource": "attendedCourses"
-						}
-					},
-					{
-						"events": [
-							"onload"
-						],
 						"id": "nuSsA8dbciMLrXXx9PEABB",
 						"method": "student.notAttendedCourses",
 						"params": [],
@@ -193,6 +183,19 @@
 							"name": "$result",
 							"type": "cs.CoursesSelection",
 							"datasource": "notAttendedCourses"
+						}
+					},
+					{
+						"events": [
+							"onload"
+						],
+						"id": "2g5WD7iCu9gn41jXkocmxm",
+						"method": "student.attendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
 						}
 					}
 				],
@@ -270,6 +273,19 @@
 							"name": "$result",
 							"type": "cs.CoursesSelection",
 							"datasource": "notAttendedCourses"
+						}
+					},
+					{
+						"events": [
+							"onselect"
+						],
+						"id": "rmdRwepbmVsJwTSKqC7DeW",
+						"method": "student.attendedCourses",
+						"params": [],
+						"returns": {
+							"name": "$result",
+							"type": "cs.CoursesSelection",
+							"datasource": "attendedCourses"
 						}
 					}
 				]
@@ -983,14 +999,14 @@
 						"events": [
 							"onselect"
 						],
-						"id": "5r1wfCRZwtmt1Xo7Janmb1",
+						"id": "6zN4E3hTby1vmxMv9hPzMe",
 						"method": "student.attendsToCourse",
 						"params": [
 							{
 								"name": "$course",
 								"type": "cs.CoursesEntity",
 								"datasource": "notAttendedCourse",
-								"id": "1mjjCWgcn5b3CCF8sR2bZi"
+								"id": "42sELF9bjR7kGDDm9ouStv"
 							}
 						],
 						"returns": {
@@ -1145,8 +1161,8 @@
 					"width": "300px"
 				},
 				"orientation": "vertical",
-				"datasource": "student.attendedCourses",
-				"currentElement": "currentAttendedCourse",
+				"datasource": "attendedCourses",
+				"currentElement": "attendedCourse",
 				"events": []
 			},
 			"displayName": "Matrix",
@@ -1200,7 +1216,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "currentAttendedCourse.name",
+								"text": "attendedCourse.name",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -1210,7 +1226,7 @@
 						]
 					}
 				],
-				"text": "<p>currentAttendedCourse.name</p>",
+				"text": "<p>attendedCourse.name</p>",
 				"style": {},
 				"classNames": [
 					"attendedCourseName"
