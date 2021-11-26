@@ -1,24 +1,110 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [],
+		"datasources": [
+			{
+				"id": "choice",
+				"type": "scalar",
+				"from": "",
+				"dataclass": "",
+				"initialValue": "",
+				"dataType": "string",
+				"events": []
+			}
+		],
 		"styles": []
 	},
 	"components": {
 		"ROOT": {
-			"parent": "",
 			"type": {
 				"resolvedName": "Container"
 			},
 			"isCanvas": true,
 			"props": {
-				"className": "bg-white min-h-full w-full px-8"
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
 			},
-			"displayName": "App",
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"lqiBYbjs-",
+				"UxWhiVVoq"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"lqiBYbjs-": {
+			"type": {
+				"resolvedName": "Radio"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"defaultValue": "Option_3",
+				"mode": "single",
+				"options": [
+					{
+						"id": "8ztjxHq6chodrHMJP6QCBx",
+						"label": "Option 1",
+						"value": "option1"
+					},
+					{
+						"id": "mvVujgmdaYqocsGrnz3zSf",
+						"label": "Option 2",
+						"value": "option2"
+					},
+					{
+						"label": "Option 3",
+						"value": "Option_3",
+						"id": "g7J7mfc5zsegx8q8gbLHVf"
+					}
+				],
+				"events": [],
+				"datasource": "choice",
+				"style": {}
+			},
+			"displayName": "Radio",
 			"custom": {},
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {}
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"UxWhiVVoq": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"events": [],
+				"style": {},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "choice",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							}
+						]
+					}
+				],
+				"text": "<p>choice</p>"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
 		}
 	}
 }

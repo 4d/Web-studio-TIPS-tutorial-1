@@ -1,0 +1,26 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": ""
+		}
+	}
+}

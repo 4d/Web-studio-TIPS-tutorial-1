@@ -1,0 +1,175 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": [
+			{
+				"name": "buttonStyle",
+				"content": "self {\n  display : inline;\n  background-color : #e73351ff;\n  margin-left : 20px;\n  margin-top : 30px;\n  font-weight : 700;\n}",
+				"children": {
+					"icon": "qF-6kPm5D_8iAvQ5XjiWo"
+				},
+				"parentId": null,
+				"scope": "local",
+				"origin": "fMJFjtwZF",
+				"id": "-W6HTsnDhEXHxmFrchm3w"
+			},
+			{
+				"id": "qF-6kPm5D_8iAvQ5XjiWo",
+				"name": "buttonStyle__icon",
+				"content": "self {\n  \n}",
+				"scope": "local",
+				"parentId": "-W6HTsnDhEXHxmFrchm3w"
+			}
+		]
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"fMJFjtwZF",
+				"uUdBA5LC2",
+				"0K2z0huwv"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"fMJFjtwZF": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Button",
+				"classNames": [
+					"buttonStyle"
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"marginTop": "30px"
+				},
+				"events": [],
+				"datasource": ""
+			},
+			"displayName": "Button",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "qJ7jlKcdj"
+			},
+			"parent": "ROOT"
+		},
+		"qJ7jlKcdj": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [
+					"buttonStyle__icon"
+				],
+				"style": {}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "fMJFjtwZF"
+		},
+		"uUdBA5LC2": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Button",
+				"classNames": [
+					"buttonStyle"
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "inline"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "X3f7ft1kv"
+			},
+			"parent": "ROOT"
+		},
+		"X3f7ft1kv": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [
+					"buttonStyle__icon"
+				]
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "uUdBA5LC2"
+		},
+		"0K2z0huwv": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Button",
+				"classNames": [
+					"buttonStyle"
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "inline"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "w0PTZSl9-"
+			},
+			"parent": "ROOT"
+		},
+		"w0PTZSl9-": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [
+					"buttonStyle__icon"
+				]
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "0K2z0huwv"
+		}
+	}
+}

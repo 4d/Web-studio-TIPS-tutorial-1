@@ -1,0 +1,172 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": [
+			{
+				"name": "TextStyle",
+				"content": "self {\n  background-color : #b3caf1ff;\n}",
+				"children": {},
+				"parentId": null,
+				"scope": "local",
+				"origin": "qEPs5uWQQ",
+				"id": "2pkVF7omk7f3Bk3SRSsQE"
+			}
+		]
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"2m_1nWCH_"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"2m_1nWCH_": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"height": "500px",
+					"marginTop": "30px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"qWMYvNr6N",
+				"qEPs5uWQQ",
+				"HBVpzZSrI"
+			],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"qEPs5uWQQ": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"events": [],
+				"style": {},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Write your text here",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Write your text here</p>",
+				"classNames": [
+					"TextStyle"
+				]
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "2m_1nWCH_"
+		},
+		"qWMYvNr6N": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Button",
+				"classNames": [],
+				"iconPosition": "hidden",
+				"style": {},
+				"events": [],
+				"datasource": ""
+			},
+			"displayName": "Button",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "VNkF0so8W"
+			},
+			"parent": "2m_1nWCH_"
+		},
+		"VNkF0so8W": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"icon": "fa-star",
+				"hidden": false
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "qWMYvNr6N"
+		},
+		"HBVpzZSrI": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"events": [],
+				"style": {},
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Write your text here",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p>Write your text here</p>",
+				"classNames": [
+					"TextStyle"
+				]
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "2m_1nWCH_"
+		}
+	}
+}

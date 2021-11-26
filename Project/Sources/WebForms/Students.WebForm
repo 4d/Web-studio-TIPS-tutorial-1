@@ -1507,7 +1507,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Blocking bugs: 419 - 551",
+								"text": "Blocking bugs: 419 - 560",
 								"bold": true,
 								"italic": false,
 								"underlined": false,
@@ -1516,7 +1516,7 @@
 						]
 					}
 				],
-				"text": "<p><b>Blocking bugs: 419 - 551</b></p>",
+				"text": "<p><b>Blocking bugs: 419 - 560</b></p>",
 				"style": {
 					"color": "#e73351ff"
 				}

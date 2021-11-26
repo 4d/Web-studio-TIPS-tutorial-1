@@ -1209,7 +1209,7 @@
 			"props": {
 				"deletable": true,
 				"moveable": true,
-				"datasource": "currentAttendedCourse.name",
+				"datasource": "attendedCourse.name",
 				"events": [],
 				"doc": [
 					{

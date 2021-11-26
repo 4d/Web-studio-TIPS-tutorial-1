@@ -1,0 +1,193 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [
+			{
+				"id": "choice",
+				"type": "scalar",
+				"from": "",
+				"dataclass": "",
+				"dataType": "string",
+				"events": []
+			},
+			{
+				"id": "choices",
+				"type": "array",
+				"from": "",
+				"dataclass": "",
+				"initialValue": [],
+				"dataType": "string",
+				"events": []
+			}
+		],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"className": "bg-white min-h-full w-full px-8",
+				"events": [],
+				"style": {}
+			},
+			"displayName": "Webform",
+			"custom": {},
+			"hidden": false,
+			"nodes": [
+				"tIfAoyNTq",
+				"KUyIp1Zw5",
+				"Y4eIYNTV0",
+				"9vmgXyYIC"
+			],
+			"linkedNodes": {},
+			"parent": ""
+		},
+		"tIfAoyNTq": {
+			"type": {
+				"resolvedName": "Radio"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"defaultValue": "NY,Dallas",
+				"mode": "multiple",
+				"options": [
+					{
+						"label": "New York (US)",
+						"value": "NY",
+						"id": "nLiryqjz77WCjtDnCUrbxp"
+					},
+					{
+						"label": "Dallas (US)",
+						"value": "Dallas",
+						"id": "uhWrxvt4H2K2RYG5CMxznd"
+					},
+					{
+						"label": "Paris (France)",
+						"value": "Paris",
+						"id": "oQG6mD5oAj2fSncBMZBquC"
+					}
+				],
+				"events": [],
+				"datasource": "",
+				"style": {}
+			},
+			"displayName": "Radio",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"Y4eIYNTV0": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "choices",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							}
+						]
+					}
+				],
+				"text": "<p>choices</p>",
+				"style": {
+					"marginTop": "30px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"9vmgXyYIC": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "choice",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"isDataSource": true
+							}
+						]
+					}
+				],
+				"text": "<p>choice</p>",
+				"style": {}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "ROOT"
+		},
+		"KUyIp1Zw5": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Button",
+				"classNames": [],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "inline"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "FKAUhS_Eu"
+			},
+			"parent": "ROOT"
+		},
+		"FKAUhS_Eu": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": []
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {},
+			"parent": "KUyIp1Zw5"
+		}
+	}
+}
