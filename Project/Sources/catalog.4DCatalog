@@ -56,7 +56,7 @@
 		<table_extra>
 			<editor_table_info displayable_fields_count="20">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="233.9140625" top="210.77734375" width="279.36328125" height="476.89453125"/>
+				<coordinates left="7" top="780.77734375" width="279.36328125" height="476.89453125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -81,7 +81,7 @@
 		<table_extra>
 			<editor_table_info displayable_fields_count="11">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="533.3203125" top="1.97265625" width="252.18359375" height="275.71875"/>
+				<coordinates left="602.3203125" top="2.97265625" width="252.18359375" height="275.71875"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -93,7 +93,7 @@
 		<table_extra>
 			<editor_table_info displayable_fields_count="3">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="244.203125" top="58.17578125" width="117.5078125" height="124.31640625"/>
+				<coordinates left="397.203125" top="19.17578125" width="117.5078125" height="124.31640625"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -106,7 +106,7 @@
 		<table_extra>
 			<editor_table_info displayable_fields_count="5">
 				<color red="255" green="255" blue="255" alpha="0"/>
-				<coordinates left="0" top="104.94921875" width="161.6015625" height="158.2109375"/>
+				<coordinates left="28" top="739.94921875" width="161.6015625" height="158.2109375"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

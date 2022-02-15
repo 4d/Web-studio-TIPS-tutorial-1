@@ -1,7 +1,26 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [],
+		"datasources": [
+			{
+				"id": "courses",
+				"from": "",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entitysel",
+				"initialValue": "all",
+				"events": []
+			},
+			{
+				"id": "course",
+				"from": "courses",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			}
+		],
 		"styles": []
 	},
 	"components": {
@@ -12,51 +31,46 @@
 			"isCanvas": true,
 			"props": {
 				"className": "bg-white min-h-full w-full px-8",
-				"events": [],
-				"style": {}
+				"events": []
 			},
 			"displayName": "Webform",
 			"custom": {},
+			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"CPvU-R2Ip"
+				"1qpNqCa9Wc"
 			],
-			"linkedNodes": {},
-			"parent": ""
+			"linkedNodes": {}
 		},
-		"CPvU-R2Ip": {
+		"1qpNqCa9Wc": {
 			"type": {
-				"resolvedName": "Text"
+				"resolvedName": "DataTable"
 			},
 			"isCanvas": false,
 			"props": {
-				"deletable": true,
-				"moveable": true,
-				"datasource": "",
+				"datasource": "courses",
+				"currentElement": "course",
 				"events": [],
-				"style": {},
-				"doc": [
+				"style": {
+					"width": "600px"
+				},
+				"columns": [
 					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Courses page",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
+						"title": "Name",
+						"source": "name",
+						"format": "",
+						"width": 200,
+						"sorting": false,
+						"id": "pEtNRZ7GAL3FLiEzJXT5A7"
 					}
-				],
-				"text": "<p>Courses page</p>"
+				]
 			},
-			"displayName": "Text",
+			"displayName": "Datatable",
 			"custom": {},
+			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {},
-			"parent": "ROOT"
+			"linkedNodes": {}
 		}
 	}
 }

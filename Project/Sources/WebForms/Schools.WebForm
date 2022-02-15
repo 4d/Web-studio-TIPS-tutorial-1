@@ -1,7 +1,26 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [],
+		"datasources": [
+			{
+				"id": "schools",
+				"from": "",
+				"dataclass": "Schools",
+				"dataType": "",
+				"type": "entitysel",
+				"initialValue": "all",
+				"events": []
+			},
+			{
+				"id": "school",
+				"from": "schools",
+				"dataclass": "Schools",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			}
+		],
 		"styles": []
 	},
 	"components": {
@@ -12,51 +31,46 @@
 			"isCanvas": true,
 			"props": {
 				"className": "bg-white min-h-full w-full px-8",
-				"events": [],
-				"style": {}
+				"events": []
 			},
 			"displayName": "Webform",
 			"custom": {},
+			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"z_XqOGreZ"
+				"I-vmR2tXNy"
 			],
-			"linkedNodes": {},
-			"parent": ""
+			"linkedNodes": {}
 		},
-		"z_XqOGreZ": {
+		"I-vmR2tXNy": {
 			"type": {
-				"resolvedName": "Text"
+				"resolvedName": "DataTable"
 			},
 			"isCanvas": false,
 			"props": {
-				"deletable": true,
-				"moveable": true,
-				"datasource": "",
-				"events": [],
-				"style": {},
-				"doc": [
+				"datasource": "schools",
+				"currentElement": "school",
+				"columns": [
 					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Schools page",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
+						"title": "Name",
+						"source": "name",
+						"format": "",
+						"width": 150,
+						"sorting": false,
+						"id": "qQ9LuR2fHNyPBEdUSsDW6d"
 					}
 				],
-				"text": "<p>Schools page</p>"
+				"events": [],
+				"style": {
+					"width": "600px"
+				}
 			},
-			"displayName": "Text",
+			"displayName": "Datatable",
 			"custom": {},
+			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {},
-			"parent": "ROOT"
+			"linkedNodes": {}
 		}
 	}
 }

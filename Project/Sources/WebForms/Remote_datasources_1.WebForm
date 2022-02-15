@@ -1,7 +1,44 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [],
+		"datasources": [
+			{
+				"id": "schools",
+				"from": "",
+				"dataclass": "Schools",
+				"dataType": "",
+				"type": "entitysel",
+				"initialValue": "all",
+				"events": []
+			},
+			{
+				"id": "school",
+				"from": "schools",
+				"dataclass": "Schools",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			},
+			{
+				"id": "courses",
+				"from": "school.courses",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "auto",
+				"initialValue": "",
+				"events": []
+			},
+			{
+				"id": "course",
+				"from": "courses",
+				"dataclass": "Courses",
+				"dataType": "",
+				"type": "entity",
+				"initialValue": "first",
+				"events": []
+			}
+		],
 		"styles": []
 	},
 	"components": {
@@ -17,10 +54,261 @@
 			},
 			"displayName": "Webform",
 			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"g9JbqyT_O6",
+				"6KRnhRKRa4"
+			],
+			"linkedNodes": {}
+		},
+		"g9JbqyT_O6": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "600px",
+					"display": "flex",
+					"flexDirection": "row",
+					"justifyContent": "space-between"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"jZVorN5-lB",
+				"nYgtH12i0d"
+			],
+			"linkedNodes": {}
+		},
+		"jZVorN5-lB": {
+			"type": {
+				"resolvedName": "DataTable"
+			},
+			"isCanvas": false,
+			"props": {
+				"datasource": "schools",
+				"currentElement": "school",
+				"events": [],
+				"columns": [
+					{
+						"title": "Name",
+						"source": "name",
+						"format": "",
+						"width": 150,
+						"sorting": false,
+						"id": "uu86dAfSEfScgvtBvQDMxq"
+					}
+				]
+			},
+			"displayName": "Datatable",
+			"custom": {},
+			"parent": "g9JbqyT_O6",
 			"hidden": false,
 			"nodes": [],
-			"linkedNodes": {},
-			"parent": ""
+			"linkedNodes": {}
+		},
+		"6KRnhRKRa4": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"bJzadn9a7l",
+				"zzVmSbS30f",
+				"X0BduEVUb"
+			],
+			"linkedNodes": {}
+		},
+		"bJzadn9a7l": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": true,
+				"moveable": true,
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "School information",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"text": "<p><b>School information</b></p>"
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "6KRnhRKRa4",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"zzVmSbS30f": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"placeholder": "placeholder",
+				"label": "label",
+				"events": [],
+				"style": {
+					"marginTop": "20px"
+				}
+			},
+			"displayName": "Text input",
+			"custom": {},
+			"parent": "6KRnhRKRa4",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "5iZSFI1wQ3",
+				"input": "2IxhXcfd92"
+			}
+		},
+		"5iZSFI1wQ3": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"moveable": false,
+				"text": "Name",
+				"deletable": true
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "zzVmSbS30f",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"2IxhXcfd92": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": false,
+				"className": "fd-input w-full bg-transparent",
+				"type": "text",
+				"events": [],
+				"datasource": "school.name",
+				"moveable": false,
+				"placeholder": ""
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "zzVmSbS30f",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"X0BduEVUb": {
+			"type": {
+				"resolvedName": "TextInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"placeholder": "placeholder",
+				"label": "label",
+				"events": [],
+				"style": {
+					"marginTop": "20px"
+				}
+			},
+			"displayName": "Text input",
+			"custom": {},
+			"parent": "6KRnhRKRa4",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "CRxMpN3O3x",
+				"input": "svEW86CZIa"
+			}
+		},
+		"CRxMpN3O3x": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"moveable": false,
+				"text": "City",
+				"deletable": true
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "X0BduEVUb",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"svEW86CZIa": {
+			"type": {
+				"resolvedName": "Input"
+			},
+			"isCanvas": false,
+			"props": {
+				"deletable": false,
+				"className": "fd-input w-full bg-transparent",
+				"type": "text",
+				"events": [],
+				"datasource": "school.city",
+				"moveable": false,
+				"placeholder": ""
+			},
+			"displayName": "Input",
+			"custom": {},
+			"parent": "X0BduEVUb",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"nYgtH12i0d": {
+			"type": {
+				"resolvedName": "DataTable"
+			},
+			"isCanvas": false,
+			"props": {
+				"datasource": "courses",
+				"currentElement": "course",
+				"columns": [
+					{
+						"title": "Name",
+						"source": "name",
+						"format": "",
+						"width": 150,
+						"sorting": false,
+						"id": "1DwanUyqJ9HvXxxeZzEgJN"
+					}
+				]
+			},
+			"displayName": "Datatable",
+			"custom": {},
+			"parent": "g9JbqyT_O6",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
 		}
 	}
 }
